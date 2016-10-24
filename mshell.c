@@ -40,8 +40,7 @@ void execute() {
         }
     }
 
-    int p = 0;
-    int typKomendy = 0;
+    int p = 0, typKomendy = 0;
     while (p < 6) {
         if (com->argv[0] != NULL && strcmp(builtins_table[p].name, com->argv[0]) == 0) {
             typKomendy = 1;
