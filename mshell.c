@@ -11,7 +11,7 @@
 #include "include/builtins.h"
 
 int i;
-char bG[2 * MAX_LINE_LENGTH + 10];   // buffer glowny
+char bG[2 * MAX_LINE_LENGTH + 10];   // buffor glowny
 char bP[MAX_LINE_LENGTH + 10];       // buffor do parsowania
 int start, end;
 int kK;                              // koniec komendy

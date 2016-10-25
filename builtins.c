@@ -128,7 +128,6 @@ killK(char *argv[]) {
     }
 
     p = 1;
-    i = 0;
     k = strlen(argv[2]) - 1;
 
     for (i = k; i >= 0; i--) {
