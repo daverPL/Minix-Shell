@@ -134,7 +134,7 @@ void execute() {
 
                 for (i = 0; i < l; i++) {
                     if (IS_RIN(((com->redirs)[i])->flags)) {
-                        int f = open((com->redirs[i])->filename, O_RDONLY, S_IRUSR | S_IRGRP | S_IROTH);
+                        int f = open((com->redirs[i])->filename, O_RDONLY, S_IRWXU | S_IRWXG | S_IRWXO);
 
                         if (f == -1) {
                             if (errno == EACCES) {
@@ -154,7 +154,7 @@ void execute() {
                     if (IS_ROUT(((com->redirs)[i])->flags) || IS_RAPPEND(((com->redirs)[i])->flags)) {
                         if (IS_ROUT(((com->redirs)[i])->flags)) {
                             int f = open(((com->redirs)[i])->filename, O_WRONLY | O_CREAT | O_TRUNC,
-                                         S_IWUSR | S_IWGRP | S_IWOTH);
+                                         S_IRWXU | S_IRWXG | S_IRWXO);
 
                             if (f == -1) {
                                 if (errno == EACCES) {
@@ -171,7 +171,7 @@ void execute() {
                             close(f);
                         } else if (IS_RAPPEND(((com->redirs)[i])->flags)) {
                             int f = open(((com->redirs)[i])->filename, O_WRONLY | O_CREAT | O_APPEND,
-                                         S_IWUSR | S_IWGRP | S_IWOTH);
+                                         S_IRWXU | S_IRWXG | S_IRWXO);
 
                             if (f == -1) {
                                 if (errno == EACCES) {
