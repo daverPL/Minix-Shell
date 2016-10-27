@@ -5,6 +5,7 @@
 #include <unistd.h>
 #include <errno.h>
 #include <sys/stat.h>
+#include <fcntl.h>
 #include "include/siparse.h"
 #include "include/config.h"
 #include "include/utils.h"
@@ -26,53 +27,219 @@ struct stat typCzytania;             // sprawdzanie skad przychodza dane
 // wykonywanie komendy
 void execute() {
     line *ln = NULL;
-    command *com = NULL;
-    ln = parseline(bP);
-    if ((ln == NULL) || (*(ln->pipelines) == NULL) || (**(ln->pipelines) == NULL)) {
+    int pipeNumber = 0;
+    int lineSize = 0;
+
+    if ((ln = parseline(bP)) == NULL) {
         fprintf(stderr, "%s\n", SYNTAX_ERROR_STR);
         return;
     }
 
-    com = pickfirstcommand(ln);
-    if ((com == NULL) || (com->argv == NULL) || (com->argv[0] == NULL)) {
-        if (bP[0] != '#') {
-            fprintf(stderr, "%s\n", SYNTAX_ERROR_STR);
-        }
+    while ((ln->pipelines[lineSize]) != NULL) {
+        lineSize++;
     }
 
-    int p = 0, typKomendy = 0;
-    while (p < 6) {
-        if (com->argv[0] != NULL && strcmp(builtins_table[p].name, com->argv[0]) == 0) {
-            typKomendy = 1;
-            break;
+    for (pipeNumber = 0; pipeNumber < lineSize; pipeNumber++) {
+        int pipeSize = 0;
+        pipeline p = ln->pipelines[pipeNumber];
+
+        while (p[pipeSize] != NULL) {
+            pipeSize++;
         }
-        p++;
-    }
 
-    if (typKomendy == 1) {
-        int result = builtins_table[p].fun(com->argv);
-    } else {
-        pid_t pid;
-
-        if ((pid = fork()) == -1) {
-            exit(1);
-        } else if (pid == 0) {
-            if (execvp(com->argv[0], com->argv) == -1) {
-                switch (errno) {
-                    case ENOENT:
-                        fprintf(stderr, "%s: no such file or directory\n", com->argv[0]);
-                        break;
-                    case EACCES:
-                        fprintf(stderr, "%s: permission denied\n", com->argv[0]);
-                        break;
-                    default:
-                        fprintf(stderr, "%s: exec error\n", com->argv[0]);
-                        break;
-                }
-                exit(EXEC_FAILURE);
+        int pozycja = 0;
+        for (pozycja = 0; pozycja < pipeSize; pozycja++) {
+            if (p[pozycja]->argv[0] == NULL && pipeSize > 1) {
+                fprintf(stderr, "%s\n", SYNTAX_ERROR_STR);
+                return;
             }
-        } else if (waitpid(pid, NULL, 0) == -1) {
-            exit(1);
+        }
+    }
+
+    for (pipeNumber = 0; pipeNumber < lineSize; pipeNumber++) {
+        int comNumber = 0;
+        int pipeSize = 0;
+        pipeline p = ln->pipelines[pipeNumber];
+
+        while (p[pipeSize] != NULL) {
+            pipeSize++;
+        }
+
+        int pipes[MAX_LINE_LENGTH / 2][2];
+
+        for (comNumber = 0; comNumber < pipeSize; comNumber++) {
+            command *com = p[comNumber];
+
+            if (pipeSize == 1) {
+                int p = 0, typKomendy = 0;
+                while (p < 6) {
+                    if (com->argv[0] != NULL && strcmp(builtins_table[p].name, com->argv[0]) == 0) {
+                        typKomendy = 1;
+                        break;
+                    }
+                    p++;
+                }
+
+                if (typKomendy == 1) {
+                    builtins_table[p].fun(com->argv);
+                    continue;
+                }
+            }
+
+            int createPipe = pipe(pipes[comNumber]);
+
+            if (createPipe == -1) {
+                return;
+            }
+
+            pid_t pid;
+
+            if ((pid = fork()) == -1) {
+                exit(1);
+            } else if (pid == 0) {
+                int c = close(pipes[comNumber][0]);
+
+                if (c == -1) {
+                    exit(1);
+                }
+
+                if (comNumber > 0) {
+                    c = close(pipes[comNumber - 1][1]);
+                    if (c == -1) {
+                        exit(1);
+                    }
+                }
+
+                if (comNumber == pipeSize - 1) {
+                    int cc = close(pipes[comNumber][1]);
+                    if (cc == -1) {
+                        exit(1);
+                    }
+                }
+
+                if (comNumber > 0) {
+                    close(STDIN_FILENO);
+                    dup2(pipes[comNumber - 1][0], STDIN_FILENO);
+                    close(pipes[comNumber - 1][0]);
+                }
+                if (comNumber < pipeSize - 1) {
+                    close(STDOUT_FILENO);
+                    dup2(pipes[comNumber][1], STDOUT_FILENO);
+                    close(pipes[comNumber][1]);
+                }
+                int l = 0;
+                while (com->redirs[l] != NULL) {
+                    l++;
+                }
+
+                for (i = 0; i < l; i++) {
+                    if (IS_RIN(((com->redirs)[i])->flags)) {
+                        int f = open((com->redirs[i])->filename, O_RDONLY, S_IRUSR | S_IRGRP | S_IROTH);
+
+                        if (f == -1) {
+                            if (errno == EACCES) {
+                                fprintf(stderr, "%s: permission denied\n", ((com->redirs)[i])->filename);
+                            }
+                            if (errno == ENOENT) {
+                                fprintf(stderr, "%s: no such file or directory\n", ((com->redirs)[i])->filename);
+                            }
+                            exit(1);
+                        }
+
+                        close(STDIN_FILENO);
+                        dup2(f, STDIN_FILENO);
+                        close(f);
+                    }
+
+                    if (IS_ROUT(((com->redirs)[i])->flags) || IS_RAPPEND(((com->redirs)[i])->flags)) {
+                        if (IS_ROUT(((com->redirs)[i])->flags)) {
+                            int f = open(((com->redirs)[i])->filename, O_WRONLY | O_CREAT | O_TRUNC,
+                                         S_IWUSR | S_IWGRP | S_IWOTH);
+
+                            if (f == -1) {
+                                if (errno == EACCES) {
+                                    fprintf(stderr, "%s: permission denied\n", ((com->redirs)[i])->filename);
+                                }
+                                if (errno == ENOENT) {
+                                    fprintf(stderr, "%s: no such file or directory\n", ((com->redirs)[i])->filename);
+                                }
+                                exit(1);
+                            }
+
+                            close(STDOUT_FILENO);
+                            dup2(f, STDOUT_FILENO);
+                            close(f);
+                        } else if (IS_RAPPEND(((com->redirs)[i])->flags)) {
+                            int f = open(((com->redirs)[i])->filename, O_WRONLY | O_CREAT | O_APPEND,
+                                         S_IWUSR | S_IWGRP | S_IWOTH);
+
+                            if (f == -1) {
+                                if (errno == EACCES) {
+                                    fprintf(stderr, "%s: permission denied\n", ((com->redirs)[i])->filename);
+                                }
+                                if (errno == ENOENT) {
+                                    fprintf(stderr, "%s: no such file or directory\n", ((com->redirs)[i])->filename);
+                                }
+                                exit(1);
+                            }
+
+                            close(STDOUT_FILENO);
+                            dup2(f, STDOUT_FILENO);
+                            close(f);
+                        }
+                    }
+                }
+
+                if (execvp(com->argv[0], com->argv) == -1) {
+                    close(STDOUT_FILENO);
+                    close(STDIN_FILENO);
+                    switch (errno) {
+                        case ENOENT:
+                            fprintf(stderr, "%s: no such file or directory\n", com->argv[0]);
+                            break;
+                        case EACCES:
+                            fprintf(stderr, "%s: permission denied\n", com->argv[0]);
+                            break;
+                        default:
+                            fprintf(stderr, "%s: exec error\n", com->argv[0]);
+                            break;
+                    }
+                    exit(EXEC_FAILURE);
+                }
+
+            } else {
+                if (comNumber >= 2) {
+                    int c1 = close(pipes[comNumber - 2][0]);
+                    int c2 = close(pipes[comNumber - 2][1]);
+
+                    if (c1 == -1 || c2 == -1) {
+                        exit(1);
+                    }
+                }
+
+                if (comNumber == pipeSize - 1) {
+                    int c1 = 0, c2 = 0, c3, c4;
+                    if (comNumber > 0) {
+                        c1 = close(pipes[comNumber - 1][0]);
+                        c2 = close(pipes[comNumber - 1][1]);
+                    }
+                    c3 = close(pipes[comNumber][0]);
+                    c4 = close(pipes[comNumber][1]);
+                    if (c1 == -1 || c2 == -1 || c3 == -1 || c4 == -1) {
+                        exit(1);
+                    }
+
+                    int endProcess = 0;
+
+                    while (endProcess < pipeSize) {
+                        int pid = wait(NULL);
+                        if (pid == -1) {
+                            exit(1);
+                        }
+                        endProcess++;
+                    }
+                }
+            }
         }
     }
 }
