@@ -5,10 +5,10 @@
 #include <unistd.h>
 #include <errno.h>
 #include <sys/stat.h>
-#include "include/siparse.h"
-#include "include/config.h"
-#include "include/utils.h"
-#include "include/builtins.h"
+#include "../include/siparse.h"
+#include "../include/config.h"
+#include "../include/utils.h"
+#include "../include/builtins.h"
 
 int i;
 char bG[2 * MAX_LINE_LENGTH + 10];   // buffor glowny

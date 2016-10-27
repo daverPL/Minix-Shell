@@ -8,11 +8,11 @@ set(SOURCE_FILES
     include/config.h
     include/siparse.h
     include/utils.h
-    input_parse/Makefile
-    input_parse/siparse.lex
-    input_parse/siparse.y
-    input_parse/siparseutils.c
-    input_parse/siparseutils.h
+        inputParse/Makefile
+        inputParse/siparse.lex
+        inputParse/siparse.y
+        inputParse/siparseutils.c
+        inputParse/siparseutils.h
     builtins.c
     Makefile
     mshell.c

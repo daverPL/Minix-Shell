@@ -3,11 +3,11 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/mshell.c" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/input_parse/siparse.lex" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/input_parse/Makefile" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/input_parse/siparseutils.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/input_parse/siparse.y" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/input_parse/siparseutils.c" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/inputParse/siparse.lex" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/inputParse/Makefile" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/inputParse/siparseutils.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/inputParse/siparse.y" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/inputParse/siparseutils.c" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CMakeLists.txt" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Makefile" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/siparse.a" isTestSource="false" />
