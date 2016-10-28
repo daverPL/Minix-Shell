@@ -8,21 +8,112 @@
 #include <fcntl.h>
 #include "include/siparse.h"
 #include "include/config.h"
-#include "include/utils.h"
 #include "include/builtins.h"
+#include "include/utils.h"
+
+#define FOR(i, a, b) for((i) = (a); (i) <= (b); (i)=(i)+1)
+#define FOR_D(i, a, b) for((i) = (a); (i) >= (b); (i) = (i) - 1)
+#define SYNTAX() fprintf(stderr, "%s\n", SYNTAX_ERROR_STR)
 
 int i;
-char bG[2 * MAX_LINE_LENGTH + 10];   // buffor glowny
-char bP[MAX_LINE_LENGTH + 10];       // buffor do parsowania
+char buforGlowny[2 * MAX_LINE_LENGTH + 10];    // buffor glowny
+char buforParsera[MAX_LINE_LENGTH + 10];       // buffor do parsowania
+int pipes[MAX_LINE_LENGTH / 2][2];             // tu trzymamy pipe'y do komunikacji
 int start, end;
-int kK;                              // koniec komendy
-int shiftB;                          // przesuwanie buffera
-int pozB;                            // pozycja aktualna w bufferze
-int pozBP;                           // pozycja aktualna w bufferzr do parsowania
-int kL;                              // koniec linii
-int kOL;                             // koniec ostatniej linii
-int lZD;                             // linia za dluga
-struct stat typCzytania;             // sprawdzanie skad przychodza dane
+int koniecKomendy;                             // koniec komendy
+int przesuwanieBufora;                         // przesuwanie buffera
+int pozycjaBufor;                              // pozycja aktualna w bufferze
+int pozycjaParser;                             // pozycja aktualna w bufferzr do parsowania
+int koniecLinii;                               // koniec linii
+int koniecOstatniejLinii;                      // koniec ostatniej linii
+int liniaZaDluga;                              // linia za dluga
+struct stat typCzytania;                       // sprawdzanie skad przychodza dane
+
+int statusOtwarciaPliku(command *com) {
+    switch (errno) {
+        case EACCES:
+            fprintf(stderr, "%s: permission denied\n", ((com->redirs)[i])->filename);
+            break;
+        case ENOENT:
+            fprintf(stderr, "%s: no such file or directory\n", ((com->redirs)[i])->filename);
+            break;
+    }
+    exit(1);
+}
+
+int statusExec(command *com) {
+    switch (errno) {
+        case ENOENT:
+            fprintf(stderr, "%s: no such file or directory\n", com->argv[0]);
+            break;
+        case EACCES:
+            fprintf(stderr, "%s: permission denied\n", com->argv[0]);
+            break;
+        default:
+            fprintf(stderr, "%s: exec error\n", com->argv[0]);
+            break;
+    }
+}
+
+int komendaWbudowana(command *com) {
+    int p = 0, typKomendy = 0;
+    while (p < 6) {
+        if (com->argv[0] != NULL && strcmp(builtins_table[p].name, com->argv[0]) == 0) {
+            typKomendy = 1;
+            break;
+        }
+        p++;
+    }
+
+    if (typKomendy == 1) {
+        builtins_table[p].fun(com->argv);
+        return 1;
+    }
+
+    return 0;
+}
+
+void przekierowaniaWejscia(int l, command *com) {
+    FOR(i, 0, l - 1) {
+        if (IS_RIN(((com->redirs)[i])->flags)) {
+            int f = open((com->redirs[i])->filename, O_RDONLY, S_IRWXU | S_IRWXG | S_IRWXO);
+
+            if (f == -1) {
+                statusOtwarciaPliku(com);
+            }
+
+            close(STDIN_FILENO);
+            dup2(f, STDIN_FILENO);
+            close(f);
+        }
+
+        if (IS_ROUT(((com->redirs)[i])->flags) || IS_RAPPEND(((com->redirs)[i])->flags)) {
+            if (IS_ROUT(((com->redirs)[i])->flags)) {
+                int f = open(((com->redirs)[i])->filename, O_WRONLY | O_CREAT | O_TRUNC,
+                             S_IRWXU | S_IRWXG | S_IRWXO);
+
+                if (f == -1) {
+                    statusOtwarciaPliku(com);
+                }
+
+                close(STDOUT_FILENO);
+                dup2(f, STDOUT_FILENO);
+                close(f);
+            } else if (IS_RAPPEND(((com->redirs)[i])->flags)) {
+                int f = open(((com->redirs)[i])->filename, O_WRONLY | O_CREAT | O_APPEND,
+                             S_IRWXU | S_IRWXG | S_IRWXO);
+
+                if (f == -1) {
+                    statusOtwarciaPliku(com);
+                }
+
+                close(STDOUT_FILENO);
+                dup2(f, STDOUT_FILENO);
+                close(f);
+            }
+        }
+    }
+}
 
 // wykonywanie komendy
 void execute() {
@@ -30,8 +121,8 @@ void execute() {
     int pipeNumber = 0;
     int lineSize = 0;
 
-    if ((ln = parseline(bP)) == NULL) {
-        fprintf(stderr, "%s\n", SYNTAX_ERROR_STR);
+    if ((ln = parseline(buforParsera)) == NULL) {
+        SYNTAX();
         return;
     }
 
@@ -39,56 +130,39 @@ void execute() {
         lineSize++;
     }
 
-    for (pipeNumber = 0; pipeNumber < lineSize; pipeNumber++) {
+    FOR(pipeNumber, 0, lineSize - 1) {
         int pipeSize = 0;
-        pipeline p = ln->pipelines[pipeNumber];
-
-        while (p[pipeSize] != NULL) {
+        while (ln->pipelines[pipeNumber][pipeSize] != NULL) {
             pipeSize++;
         }
 
         int pozycja = 0;
-        for (pozycja = 0; pozycja < pipeSize; pozycja++) {
-            if (p[pozycja]->argv[0] == NULL && pipeSize > 1) {
-                fprintf(stderr, "%s\n", SYNTAX_ERROR_STR);
+        FOR(pozycja, 0, pipeSize - 1) {
+            if (ln->pipelines[pipeNumber][pozycja]->argv[0] == NULL && pipeSize > 1) {
+                SYNTAX();
                 return;
             }
         }
     }
 
-    for (pipeNumber = 0; pipeNumber < lineSize; pipeNumber++) {
+    FOR(pipeNumber, 0, lineSize - 1) {
         int comNumber = 0;
         int pipeSize = 0;
-        pipeline p = ln->pipelines[pipeNumber];
-
-        while (p[pipeSize] != NULL) {
+        while (ln->pipelines[pipeNumber][pipeSize] != NULL) {
             pipeSize++;
         }
 
-        int pipes[MAX_LINE_LENGTH / 2][2];
-
-        for (comNumber = 0; comNumber < pipeSize; comNumber++) {
-            command *com = p[comNumber];
-
+        FOR(comNumber, 0, pipeSize - 1) {
+            command *com = ln->pipelines[pipeNumber][comNumber];
             if (pipeSize == 1) {
-                int p = 0, typKomendy = 0;
-                while (p < 6) {
-                    if (com->argv[0] != NULL && strcmp(builtins_table[p].name, com->argv[0]) == 0) {
-                        typKomendy = 1;
-                        break;
-                    }
-                    p++;
-                }
-
-                if (typKomendy == 1) {
-                    builtins_table[p].fun(com->argv);
+                if (komendaWbudowana(com) == 1) {
                     continue;
                 }
             }
 
-            int createPipe = pipe(pipes[comNumber]);
+            int PIPE = pipe(pipes[comNumber]);
 
-            if (createPipe == -1) {
+            if (PIPE == -1) {
                 return;
             }
 
@@ -127,86 +201,19 @@ void execute() {
                     dup2(pipes[comNumber][1], STDOUT_FILENO);
                     close(pipes[comNumber][1]);
                 }
-                int l = 0;
-                while (com->redirs[l] != NULL) {
-                    l++;
+                int liczbaPrzekierowan = 0;
+                while (com->redirs[liczbaPrzekierowan] != NULL) {
+                    liczbaPrzekierowan++;
                 }
 
-                for (i = 0; i < l; i++) {
-                    if (IS_RIN(((com->redirs)[i])->flags)) {
-                        int f = open((com->redirs[i])->filename, O_RDONLY, S_IRWXU | S_IRWXG | S_IRWXO);
-
-                        if (f == -1) {
-                            if (errno == EACCES) {
-                                fprintf(stderr, "%s: permission denied\n", ((com->redirs)[i])->filename);
-                            }
-                            if (errno == ENOENT) {
-                                fprintf(stderr, "%s: no such file or directory\n", ((com->redirs)[i])->filename);
-                            }
-                            exit(1);
-                        }
-
-                        close(STDIN_FILENO);
-                        dup2(f, STDIN_FILENO);
-                        close(f);
-                    }
-
-                    if (IS_ROUT(((com->redirs)[i])->flags) || IS_RAPPEND(((com->redirs)[i])->flags)) {
-                        if (IS_ROUT(((com->redirs)[i])->flags)) {
-                            int f = open(((com->redirs)[i])->filename, O_WRONLY | O_CREAT | O_TRUNC,
-                                         S_IRWXU | S_IRWXG | S_IRWXO);
-
-                            if (f == -1) {
-                                if (errno == EACCES) {
-                                    fprintf(stderr, "%s: permission denied\n", ((com->redirs)[i])->filename);
-                                }
-                                if (errno == ENOENT) {
-                                    fprintf(stderr, "%s: no such file or directory\n", ((com->redirs)[i])->filename);
-                                }
-                                exit(1);
-                            }
-
-                            close(STDOUT_FILENO);
-                            dup2(f, STDOUT_FILENO);
-                            close(f);
-                        } else if (IS_RAPPEND(((com->redirs)[i])->flags)) {
-                            int f = open(((com->redirs)[i])->filename, O_WRONLY | O_CREAT | O_APPEND,
-                                         S_IRWXU | S_IRWXG | S_IRWXO);
-
-                            if (f == -1) {
-                                if (errno == EACCES) {
-                                    fprintf(stderr, "%s: permission denied\n", ((com->redirs)[i])->filename);
-                                }
-                                if (errno == ENOENT) {
-                                    fprintf(stderr, "%s: no such file or directory\n", ((com->redirs)[i])->filename);
-                                }
-                                exit(1);
-                            }
-
-                            close(STDOUT_FILENO);
-                            dup2(f, STDOUT_FILENO);
-                            close(f);
-                        }
-                    }
-                }
+                przekierowaniaWejscia(liczbaPrzekierowan, com);
 
                 if (execvp(com->argv[0], com->argv) == -1) {
                     close(STDOUT_FILENO);
                     close(STDIN_FILENO);
-                    switch (errno) {
-                        case ENOENT:
-                            fprintf(stderr, "%s: no such file or directory\n", com->argv[0]);
-                            break;
-                        case EACCES:
-                            fprintf(stderr, "%s: permission denied\n", com->argv[0]);
-                            break;
-                        default:
-                            fprintf(stderr, "%s: exec error\n", com->argv[0]);
-                            break;
-                    }
+                    statusExec(com);
                     exit(EXEC_FAILURE);
                 }
-
             } else {
                 if (comNumber >= 2) {
                     int c1 = close(pipes[comNumber - 2][0]);
@@ -232,8 +239,7 @@ void execute() {
                     int endProcess = 0;
 
                     while (endProcess < pipeSize) {
-                        int pid = wait(NULL);
-                        if (pid == -1) {
+                        if (wait(NULL) == -1) {
                             exit(1);
                         }
                         endProcess++;
@@ -247,90 +253,92 @@ void execute() {
 // znajdowanie nowej linii
 void findNewLine() {
     int i = 0;
-    for (i = start; bG[i] != 0; ++i) {
-        if (bG[i] == '\n') {
-            kL = i;
+    for (i = start; buforGlowny[i] != 0; i++) {
+        if (buforGlowny[i] == '\n') {
+            koniecLinii = i;
             return;
         }
     }
     if (i > 0)
-        kL = i - 1;
-    else kL = 0;
+        koniecLinii = i - 1;
+    else koniecLinii = 0;
 }
 
 // przesuwanie buffera w lewo
 void shiftBufferLeft() {
-    if (kK) {
-        kK = 0;
-        start = end = kL = 0;
-        kOL = -1;
-        pozB = pozBP = 0;
-        memset(bP, 0, MAX_LINE_LENGTH + 10);
-        memset(bG, 0, 2 * MAX_LINE_LENGTH + 10);
+    if (koniecKomendy) {
+        koniecKomendy = 0;
+        start = end = koniecLinii = 0;
+        koniecOstatniejLinii = -1;
+        pozycjaBufor = pozycjaParser = 0;
+        memset(buforParsera, 0, MAX_LINE_LENGTH + 10);
+        memset(buforGlowny, 0, 2 * MAX_LINE_LENGTH + 10);
         return;
     }
 
-    for (i = kOL + 1; i <= end; ++i) {
-        bG[i - (kOL + 1)] = bG[i];
-        bP[i - (kOL + 1)] = bG[i];
+    FOR(i, koniecOstatniejLinii + 1, end) {
+        buforGlowny[i - (koniecOstatniejLinii + 1)] = buforGlowny[i];
+        buforParsera[i - (koniecOstatniejLinii + 1)] = buforGlowny[i];
     }
-    for (i = end - kOL; i < 2 * MAX_LINE_LENGTH + 10; ++i)
-        bG[i] = 0;
-    for (i = end - kOL; i < MAX_LINE_LENGTH + 10; ++i)
-        bP[i] = 0;
-    end = end - (kOL + 1);
-    if (bG[0] == 0) {
-        pozB = pozBP = 0;
-        start = kL = end = 0;
-        kOL = -1;
+    FOR(i, end, 2 * MAX_LINE_LENGTH + 9) {
+        buforGlowny[i] = 0;
+    }
+    FOR(i, end - koniecOstatniejLinii, MAX_LINE_LENGTH + 9) {
+        buforParsera[i] = 0;
+    }
+    end = end - (koniecOstatniejLinii + 1);
+    if (buforGlowny[0] == 0) {
+        pozycjaBufor = pozycjaParser = 0;
+        start = koniecLinii = end = 0;
+        koniecOstatniejLinii = -1;
     } else {
-        pozB = pozBP = end + 1;
-        start = kL = end + 1;
-        kOL = -1;
+        pozycjaBufor = pozycjaParser = end + 1;
+        start = koniecLinii = end + 1;
+        koniecOstatniejLinii = -1;
     }
 }
 
 // pobieranie nowej linii
 void getLines() {
-    int k = 0;
-    if (pozB == end) {
-        if (bG[pozB] == '\n') {
-            kK = 1;
+    ssize_t k = 0;
+    if (pozycjaBufor == end) {
+        if (buforGlowny[pozycjaBufor] == '\n') {
+            koniecKomendy = 1;
         }
-        if (shiftB) {
-            shiftB = 0;
+        if (przesuwanieBufora) {
+            przesuwanieBufora = 0;
             shiftBufferLeft();
         }
         if (end == 0) {
-            if (bG[0] == 0) {
-                k = read(0, bG, MAX_LINE_LENGTH + 1);
-                pozBP = pozB = 0;
-                start = kL = 0;
-                kOL = -1;
+            if (buforGlowny[0] == 0) {
+                k = read(0, buforGlowny, MAX_LINE_LENGTH + 1);
+                pozycjaParser = pozycjaBufor = 0;
+                start = koniecLinii = 0;
+                koniecOstatniejLinii = -1;
                 end = k - 1;
             } else {
-                k = read(0, bG + 1, MAX_LINE_LENGTH + 1);
-                pozBP = pozB = 1;
-                start = kL = 1;
-                kOL = -1;
+                k = read(0, buforGlowny + 1, MAX_LINE_LENGTH + 1);
+                pozycjaParser = pozycjaBufor = 1;
+                start = koniecLinii = 1;
+                koniecOstatniejLinii = -1;
                 end = k;
             }
         } else if (end > 0) {
-            k = read(0, bG + end + 1, MAX_LINE_LENGTH + 1);
-            pozB = end + 1;
-            pozBP = end + 1;
-            start = kL = end + 1;
+            k = read(0, buforGlowny + end + 1, MAX_LINE_LENGTH + 1);
+            pozycjaBufor = end + 1;
+            pozycjaParser = end + 1;
+            start = koniecLinii = end + 1;
             end += k;
-            kOL = -1;
+            koniecOstatniejLinii = -1;
         }
         if (k == -1) {
             exit(1);
         }
 
         if (k == 0) {
-            if (strlen(bP)) {
-                bP[pozBP] = 0;
-                if (!lZD)
+            if (strlen(buforParsera)) {
+                buforParsera[pozycjaParser] = 0;
+                if (!liniaZaDluga)
                     execute();
             }
             if (S_ISCHR(typCzytania.st_mode))
@@ -339,68 +347,70 @@ void getLines() {
             exit(0);
         }
     }
-    while (pozB <= end) {
+    while (pozycjaBufor <= end) {
         findNewLine();
-        if (kL - (kOL + 1) > MAX_LINE_LENGTH) {
+        if (koniecLinii - (koniecOstatniejLinii + 1) > MAX_LINE_LENGTH) {
             int p;
-            for (p = start; p <= end; ++p)
-                bG[p - start] = bG[p];
+            FOR(p, start, end) {
+                buforGlowny[p - start] = buforGlowny[p];
+            }
+            FOR(p, 0, MAX_LINE_LENGTH + 9) {
+                buforParsera[p] = 0;
+            }
+            FOR(p, end + 1, 2 * MAX_LINE_LENGTH + 9) {
+                buforGlowny[p] = 0;
+            }
 
-            for (p = 0; p < MAX_LINE_LENGTH + 10; ++p)
-                bP[p] = 0;
-            for (p = end + 1; p < 2 * MAX_LINE_LENGTH + 10; ++p)
-                bG[p] = 0;
-
-            lZD = 1;
-            kL = kL - start;
-            start = pozB = pozBP = 0;
+            liniaZaDluga = 1;
+            koniecLinii = koniecLinii - start;
+            start = pozycjaBufor = pozycjaParser = 0;
             end = k - 1;
-            kOL = -1;
+            koniecOstatniejLinii = -1;
         }
-        for (pozB = start; pozB <= kL; ++pozB, ++pozBP) {
-            bP[pozBP] = bG[pozB];
-            if (pozB == end) {
-                if (bG[pozB] == '\n') {
-                    bP[pozBP] = 0;
-                    kOL = end;
-                    shiftB = 1;
-                    if (start != kL) {
-                        if (!lZD)
+        for (pozycjaBufor = start; pozycjaBufor <= koniecLinii; ++pozycjaBufor, ++pozycjaParser) {
+            buforParsera[pozycjaParser] = buforGlowny[pozycjaBufor];
+            if (pozycjaBufor == end) {
+                if (buforGlowny[pozycjaBufor] == '\n') {
+                    buforParsera[pozycjaParser] = 0;
+                    koniecOstatniejLinii = end;
+                    przesuwanieBufora = 1;
+                    if (start != koniecLinii) {
+                        if (!liniaZaDluga)
                             execute();
                     }
-                    kK = 1;
-                    memset(bP, 0, MAX_LINE_LENGTH + 10);
-                    pozBP = 0;
-                    if (lZD) {
-                        pozB = 0;
-                        memset(bP, 0, MAX_LINE_LENGTH + 10);
-                        memset(bG, 0, 2 * MAX_LINE_LENGTH + 10);
-                        kOL = -1;
-                        kL = end = start = 0;
-                        shiftB = 0;
-                        kK = 0;
-                        lZD = 0;
+                    koniecKomendy = 1;
+                    memset(buforParsera, 0, MAX_LINE_LENGTH + 10);
+                    pozycjaParser = 0;
+                    if (liniaZaDluga) {
+                        pozycjaBufor = 0;
+                        memset(buforParsera, 0, MAX_LINE_LENGTH + 10);
+                        memset(buforGlowny, 0, 2 * MAX_LINE_LENGTH + 10);
+                        koniecOstatniejLinii = -1;
+                        koniecLinii = end = start = 0;
+                        przesuwanieBufora = 0;
+                        koniecKomendy = 0;
+                        liniaZaDluga = 0;
                     }
                 }
                 return;
-            } else if (pozB == kL) {
-                if (bG[pozB] == '\n') {
-                    bP[pozBP] = 0;
-                    kOL = pozB;
+            } else if (pozycjaBufor == koniecLinii) {
+                if (buforGlowny[pozycjaBufor] == '\n') {
+                    buforParsera[pozycjaParser] = 0;
+                    koniecOstatniejLinii = pozycjaBufor;
 
-                    if (start != kL) {
-                        shiftB = 1;
-                        if (!lZD)
+                    if (start != koniecLinii) {
+                        przesuwanieBufora = 1;
+                        if (!liniaZaDluga)
                             execute();
                     }
 
-                    pozB++;
-                    start = pozB;
-                    kL = start;
-                    memset(bP, 0, MAX_LINE_LENGTH + 10);
-                    pozBP = 0;
+                    pozycjaBufor++;
+                    start = pozycjaBufor;
+                    koniecLinii = start;
+                    memset(buforParsera, 0, MAX_LINE_LENGTH + 10);
+                    pozycjaParser = 0;
 
-                    if (lZD) lZD = 0;
+                    if (liniaZaDluga) liniaZaDluga = 0;
 
                     break;
                 }
@@ -411,12 +421,12 @@ void getLines() {
 
 //  petla główna
 int main(int argc, char *argv[]) {
-    shiftB = lZD = kK = start = end = kL = pozB = pozBP = 0;
-    kOL = -1;
+    przesuwanieBufora = liniaZaDluga = koniecKomendy = start = end = koniecLinii = pozycjaBufor = pozycjaParser = 0;
+    koniecOstatniejLinii = -1;
     if ((fstat(0, &typCzytania)) == -1) exit(1);
 
     while (1) {
-        if (S_ISCHR(typCzytania.st_mode) && (!lZD)) {
+        if (S_ISCHR(typCzytania.st_mode) && (!liniaZaDluga)) {
             write(1, PROMPT_STR, 2);
         }
         getLines();
