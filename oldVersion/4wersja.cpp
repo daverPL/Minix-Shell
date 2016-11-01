@@ -14,12 +14,11 @@
 #define FOR(i, a, b) for((i) = (a); (i) <= (b); (i)=(i)+1)
 #define FOR_D(i, a, b) for((i) = (a); (i) >= (b); (i) = (i) - 1)
 #define SYNTAX() fprintf(stderr, "%s\n", SYNTAX_ERROR_STR)
-#define READ_END 0
-#define WRITE_END 1
 
 int i;
 char buforGlowny[2 * MAX_LINE_LENGTH + 10];    // buffor glowny
 char buforParsera[MAX_LINE_LENGTH + 10];       // buffor do parsowania
+int pipes[MAX_LINE_LENGTH / 2][2];             // tu trzymamy pipe'y do komunikacji
 int start, end;
 int koniecKomendy;                             // koniec komendy
 int przesuwanieBufora;                         // przesuwanie buffera
@@ -88,28 +87,30 @@ void przekierowaniaWejscia(int l, command *com) {
             close(f);
         }
 
-        if (IS_ROUT(((com->redirs)[i])->flags)) {
-            int f = open(((com->redirs)[i])->filename, O_WRONLY | O_CREAT | O_TRUNC,
-                         S_IRWXU | S_IRWXG | S_IRWXO);
+        if (IS_ROUT(((com->redirs)[i])->flags) || IS_RAPPEND(((com->redirs)[i])->flags)) {
+            if (IS_ROUT(((com->redirs)[i])->flags)) {
+                int f = open(((com->redirs)[i])->filename, O_WRONLY | O_CREAT | O_TRUNC,
+                             S_IRWXU | S_IRWXG | S_IRWXO);
 
-            if (f == -1) {
-                statusOtwarciaPliku(com);
+                if (f == -1) {
+                    statusOtwarciaPliku(com);
+                }
+
+                close(STDOUT_FILENO);
+                dup2(f, STDOUT_FILENO);
+                close(f);
+            } else if (IS_RAPPEND(((com->redirs)[i])->flags)) {
+                int f = open(((com->redirs)[i])->filename, O_WRONLY | O_CREAT | O_APPEND,
+                             S_IRWXU | S_IRWXG | S_IRWXO);
+
+                if (f == -1) {
+                    statusOtwarciaPliku(com);
+                }
+
+                close(STDOUT_FILENO);
+                dup2(f, STDOUT_FILENO);
+                close(f);
             }
-
-            close(STDOUT_FILENO);
-            dup2(f, STDOUT_FILENO);
-            close(f);
-        } else if (IS_RAPPEND(((com->redirs)[i])->flags)) {
-            int f = open(((com->redirs)[i])->filename, O_WRONLY | O_CREAT | O_APPEND,
-                         S_IRWXU | S_IRWXG | S_IRWXO);
-
-            if (f == -1) {
-                statusOtwarciaPliku(com);
-            }
-
-            close(STDOUT_FILENO);
-            dup2(f, STDOUT_FILENO);
-            close(f);
         }
     }
 }
@@ -151,8 +152,6 @@ void execute() {
             pipeSize++;
         }
 
-        int pipes[2 * pipeSize][2];
-
         FOR(comNumber, 0, pipeSize - 1) {
             command *com = ln->pipelines[pipeNumber][comNumber];
             if (pipeSize == 1) {
@@ -161,46 +160,92 @@ void execute() {
                 }
             }
 
-            pid_t pid;
+            int PIPE = pipe(pipes[comNumber]);
 
-            if(pipeSize - 1 != 0) {
-                pipe(pipes[comNumber]);
+            if (PIPE == -1) {
+                return;
             }
+
+            pid_t pid;
 
             if ((pid = fork()) == -1) {
                 exit(1);
             } else if (pid == 0) {
-                int liczbaPrzekierowan = 0;
+                int c = close(pipes[comNumber][0]);
 
+                if (c == -1) {
+                    exit(1);
+                }
+
+                if (comNumber > 0) {
+                    c = close(pipes[comNumber - 1][1]);
+                    if (c == -1) {
+                        exit(1);
+                    }
+                }
+
+                if (comNumber == pipeSize - 1) {
+                    int cc = close(pipes[comNumber][1]);
+                    if (cc == -1) {
+                        exit(1);
+                    }
+                }
+
+                if (comNumber > 0) {
+                    close(STDIN_FILENO);
+                    dup2(pipes[comNumber - 1][0], STDIN_FILENO);
+                    close(pipes[comNumber - 1][0]);
+                }
+                if (comNumber < pipeSize - 1) {
+                    close(STDOUT_FILENO);
+                    dup2(pipes[comNumber][1], STDOUT_FILENO);
+                    close(pipes[comNumber][1]);
+                }
+
+                int liczbaPrzekierowan = 0;
                 while (com->redirs[liczbaPrzekierowan] != NULL) {
                     liczbaPrzekierowan++;
-                }
-                if(pipeSize - 1 != 0) {
-                    if (comNumber == 0) {
-                        close(pipes[comNumber][READ_END]);
-                        dup2(pipes[comNumber][WRITE_END], STDOUT_FILENO);
-                    }
-                    if (comNumber > 0 && comNumber < pipeSize - 1) {
-                        close(pipes[comNumber - 1][WRITE_END]);
-                        dup2(pipes[comNumber - 1][READ_END], STDIN_FILENO);
-                        dup2(pipes[comNumber][WRITE_END], STDOUT_FILENO);
-                        close(pipes[comNumber][READ_END]);
-                    }
-                    if (comNumber == pipeSize - 1) {
-                        close(pipes[comNumber - 1][WRITE_END]);
-                        dup2(pipes[comNumber - 1][READ_END], STDIN_FILENO);
-                    }
                 }
 
                 przekierowaniaWejscia(liczbaPrzekierowan, com);
 
                 if (execvp(com->argv[0], com->argv) == -1) {
+                    close(STDOUT_FILENO);
+                    close(STDIN_FILENO);
                     statusExec(com);
                     exit(EXEC_FAILURE);
                 }
             } else {
-                while (wait(NULL) != -1);
-                close(pipes[comNumber][WRITE_END]);
+                if (comNumber >= 2) {
+                    int c1 = close(pipes[comNumber - 2][0]);
+                    int c2 = close(pipes[comNumber - 2][1]);
+
+                    if (c1 == -1 || c2 == -1) {
+                        exit(1);
+                    }
+                }
+
+                if (comNumber == pipeSize - 1) {
+                    int c1 = 0, c2 = 0, c3, c4;
+                    if (comNumber > 0) {
+                        c1 = close(pipes[comNumber - 1][0]);
+                        c2 = close(pipes[comNumber - 1][1]);
+                    }
+                    c3 = close(pipes[comNumber][0]);
+                    c4 = close(pipes[comNumber][1]);
+                    if (c1 == -1 || c2 == -1 || c3 == -1 || c4 == -1) {
+                        exit(1);
+                    }
+
+                    int endProcess = 0;
+
+                    while (endProcess < pipeSize) {
+                        if (wait(NULL) == -1) {
+                            exit(1);
+                        }
+                        endProcess++;
+                    }
+                }
             }
         }
     }
