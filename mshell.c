@@ -151,7 +151,7 @@ void execute() {
             pipeSize++;
         }
 
-        int pipes[2 * pipeSize][2];
+        int pipes[pipeSize][2];
 
         FOR(comNumber, 0, pipeSize - 1) {
             command *com = ln->pipelines[pipeNumber][comNumber];
@@ -163,7 +163,7 @@ void execute() {
 
             pid_t pid;
 
-            if(pipeSize - 1 != 0) {
+            if (pipeSize - 1 != 0) {
                 pipe(pipes[comNumber]);
             }
 
@@ -175,33 +175,61 @@ void execute() {
                 while (com->redirs[liczbaPrzekierowan] != NULL) {
                     liczbaPrzekierowan++;
                 }
-                if(pipeSize - 1 != 0) {
+
+                if (pipeSize - 1 != 0) {
                     if (comNumber == 0) {
                         close(pipes[comNumber][READ_END]);
+
+                        close(STDOUT_FILENO);
                         dup2(pipes[comNumber][WRITE_END], STDOUT_FILENO);
+                        close(pipes[comNumber][WRITE_END]);
                     }
                     if (comNumber > 0 && comNumber < pipeSize - 1) {
                         close(pipes[comNumber - 1][WRITE_END]);
+
+                        close(STDIN_FILENO);
                         dup2(pipes[comNumber - 1][READ_END], STDIN_FILENO);
+                        close(pipes[comNumber - 1][READ_END]);
+
+                        close(STDOUT_FILENO);
                         dup2(pipes[comNumber][WRITE_END], STDOUT_FILENO);
+                        close(pipes[comNumber][WRITE_END]);
+
                         close(pipes[comNumber][READ_END]);
                     }
                     if (comNumber == pipeSize - 1) {
                         close(pipes[comNumber - 1][WRITE_END]);
+                        close(pipes[comNumber][WRITE_END]);
+
+                        close(STDIN_FILENO);
                         dup2(pipes[comNumber - 1][READ_END], STDIN_FILENO);
+                        close(pipes[comNumber - 1][READ_END]);
                     }
                 }
 
                 przekierowaniaWejscia(liczbaPrzekierowan, com);
 
                 if (execvp(com->argv[0], com->argv) == -1) {
+                    FOR(comNumber, 0, pipeSize - 1) {
+                        close(pipes[comNumber][READ_END]);
+                        close(pipes[comNumber][WRITE_END]);
+                    }
                     statusExec(com);
                     exit(EXEC_FAILURE);
                 }
             } else {
                 while (wait(NULL) != -1);
                 close(pipes[comNumber][WRITE_END]);
+                if (comNumber >= 2) {
+                    close(pipes[comNumber - 2][READ_END]);
+                    close(pipes[comNumber - 2][WRITE_END]);
+                }
             }
+        }
+
+        FOR(comNumber, 0, pipeSize - 1) {
+            close(pipes[comNumber][READ_END]);
+            close(pipes[comNumber][WRITE_END]);
         }
     }
 }
