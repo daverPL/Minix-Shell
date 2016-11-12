@@ -125,6 +125,14 @@ void execute() {
         return;
     }
 
+    if(buforParsera[0] == '\n') {
+        return;
+    }
+
+    if(buforParsera[0] == '#') {
+        return;
+    }
+
     while ((ln->pipelines[lineSize]) != NULL) {
         lineSize++;
     }
@@ -211,10 +219,6 @@ void execute() {
                 przekierowaniaWejscia(liczbaPrzekierowan, com);
 
                 if (execvp(com->argv[0], com->argv) == -1) {
-                    FOR(comNumber, 0, pipeSize - 1) {
-                        close(pipes[comNumber][READ_END]);
-                        close(pipes[comNumber][WRITE_END]);
-                    }
                     statusExec(com);
                     exit(EXEC_FAILURE);
                 }
