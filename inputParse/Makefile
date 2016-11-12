@@ -14,7 +14,7 @@ lex.yy.o: siparse.lex y.tab.o $(HDEPS)
 	cc $(CFLAGS) lex.yy.c -c 
 
 y.tab.o: siparse.y  $(HDEPS)
-	byacc -d siparse.y
+	yacc -d siparse.y
 	cc $(CFLAGS) y.tab.c -c 
 
 siparseutils.o: siparseutils.c $(HDEPS)

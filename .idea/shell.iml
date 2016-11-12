@@ -13,9 +13,9 @@
       <sourceFolder url="file://$MODULE_DIR$/include/config.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/include/builtins.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/inputParse/siparseutils.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/inputParse/siparse.lex" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/inputParse/Makefile" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/inputParse/siparse.y" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/inputParse/siparse.lex" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/inputParse/siparseutils.c" isTestSource="false" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />

@@ -42,7 +42,7 @@ int statusOtwarciaPliku(command *com) {
     exit(1);
 }
 
-int statusExec(command *com) {
+void statusExec(command *com) {
     switch (errno) {
         case ENOENT:
             fprintf(stderr, "%s: no such file or directory\n", com->argv[0]);
@@ -175,6 +175,7 @@ void execute() {
                 while (com->redirs[liczbaPrzekierowan] != NULL) {
                     liczbaPrzekierowan++;
                 }
+
 
                 if (pipeSize - 1 != 0) {
                     if (comNumber == 0) {
