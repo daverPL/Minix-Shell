@@ -18,17 +18,14 @@
 #define WRITE_END 1
 
 int i;
-char buforGlowny[2 * MAX_LINE_LENGTH + 10];    // buffor glowny
-char buforParsera[MAX_LINE_LENGTH + 10];       // buffor do parsowania
-int start, end;
-int koniecKomendy;                             // koniec komendy
-int przesuwanieBufora;                         // przesuwanie buffera
-int pozycjaBufor;                              // pozycja aktualna w bufferze
-int pozycjaParser;                             // pozycja aktualna w bufferzr do parsowania
-int koniecLinii;                               // koniec linii
-int koniecOstatniejLinii;                      // koniec ostatniej linii
-int liniaZaDluga;                              // linia za dluga
-struct stat typCzytania;                       // sprawdzanie skad przychodza dane
+char buforGlowny[4 * MAX_LINE_LENGTH + 10];
+char buforParsera[4 * MAX_LINE_LENGTH + 10];
+int rozmiarGlowny = 0;
+int rozmiarParser = 0;
+int pozycjaGlowny = 0;
+int koniecParser = 0;
+int liniaZaDluga;
+struct stat typCzytania;
 
 int statusOtwarciaPliku(command *com) {
     switch (errno) {
@@ -114,24 +111,27 @@ void przekierowaniaWejscia(int l, command *com) {
     }
 }
 
-// wykonywanie komendy
 void execute() {
     line *ln = NULL;
     int pipeNumber = 0;
     int lineSize = 0;
+
+    buforParsera[rozmiarParser] = 0;
+
+    if (rozmiarParser == 0 || rozmiarParser == 1) {
+        return;
+    }
+
+    if (buforParsera[0] == '\n' || buforParsera[0] == '#') {
+        return;
+    }
 
     if ((ln = parseline(buforParsera)) == NULL) {
         SYNTAX();
         return;
     }
 
-    if(buforParsera[0] == '\n') {
-        return;
-    }
-
-    if(buforParsera[0] == '#') {
-        return;
-    }
+    // printparsedline(ln);
 
     while ((ln->pipelines[lineSize]) != NULL) {
         lineSize++;
@@ -239,185 +239,96 @@ void execute() {
     }
 }
 
-// znajdowanie nowej linii
-void findNewLine() {
-    int i = 0;
-    for (i = start; buforGlowny[i] != 0; i++) {
-        if (buforGlowny[i] == '\n') {
-            koniecLinii = i;
-            return;
-        }
-    }
-    if (i > 0)
-        koniecLinii = i - 1;
-    else koniecLinii = 0;
-}
+void readline() {
+    liniaZaDluga = 0;
 
-// przesuwanie buffera w lewo
-void shiftBufferLeft() {
-    if (koniecKomendy) {
-        koniecKomendy = 0;
-        start = end = koniecLinii = 0;
-        koniecOstatniejLinii = -1;
-        pozycjaBufor = pozycjaParser = 0;
-        memset(buforParsera, 0, MAX_LINE_LENGTH + 10);
-        memset(buforGlowny, 0, 2 * MAX_LINE_LENGTH + 10);
-        return;
-    }
-
-    FOR(i, koniecOstatniejLinii + 1, end) {
-        buforGlowny[i - (koniecOstatniejLinii + 1)] = buforGlowny[i];
-        buforParsera[i - (koniecOstatniejLinii + 1)] = buforGlowny[i];
-    }
-    FOR(i, end, 2 * MAX_LINE_LENGTH + 9) {
-        buforGlowny[i] = 0;
-    }
-    FOR(i, end - koniecOstatniejLinii, MAX_LINE_LENGTH + 9) {
-        buforParsera[i] = 0;
-    }
-    end = end - (koniecOstatniejLinii + 1);
-    if (buforGlowny[0] == 0) {
-        pozycjaBufor = pozycjaParser = 0;
-        start = koniecLinii = end = 0;
-        koniecOstatniejLinii = -1;
-    } else {
-        pozycjaBufor = pozycjaParser = end + 1;
-        start = koniecLinii = end + 1;
-        koniecOstatniejLinii = -1;
-    }
-}
-
-// pobieranie nowej linii
-void getLines() {
-    ssize_t k = 0;
-    if (pozycjaBufor == end) {
-        if (buforGlowny[pozycjaBufor] == '\n') {
-            koniecKomendy = 1;
-        }
-        if (przesuwanieBufora) {
-            przesuwanieBufora = 0;
-            shiftBufferLeft();
-        }
-        if (end == 0) {
-            if (buforGlowny[0] == 0) {
-                k = read(0, buforGlowny, MAX_LINE_LENGTH + 1);
-                pozycjaParser = pozycjaBufor = 0;
-                start = koniecLinii = 0;
-                koniecOstatniejLinii = -1;
-                end = k - 1;
-            } else {
-                k = read(0, buforGlowny + 1, MAX_LINE_LENGTH + 1);
-                pozycjaParser = pozycjaBufor = 1;
-                start = koniecLinii = 1;
-                koniecOstatniejLinii = -1;
-                end = k;
-            }
-        } else if (end > 0) {
-            k = read(0, buforGlowny + end + 1, MAX_LINE_LENGTH + 1);
-            pozycjaBufor = end + 1;
-            pozycjaParser = end + 1;
-            start = koniecLinii = end + 1;
-            end += k;
-            koniecOstatniejLinii = -1;
-        }
-        if (k == -1) {
-            exit(1);
-        }
-
-        if (k == 0) {
-            if (strlen(buforParsera)) {
-                buforParsera[pozycjaParser] = 0;
-                if (!liniaZaDluga)
-                    execute();
-            }
-            if (S_ISCHR(typCzytania.st_mode))
-                write(1, "\n", 1);
-
-            exit(0);
-        }
-    }
-    while (pozycjaBufor <= end) {
-        findNewLine();
-        if (koniecLinii - (koniecOstatniejLinii + 1) > MAX_LINE_LENGTH) {
-            int p;
-            FOR(p, start, end) {
-                buforGlowny[p - start] = buforGlowny[p];
-            }
-            FOR(p, 0, MAX_LINE_LENGTH + 9) {
-                buforParsera[p] = 0;
-            }
-            FOR(p, end + 1, 2 * MAX_LINE_LENGTH + 9) {
-                buforGlowny[p] = 0;
+    while (1) {
+        if (koniecParser == 1) {
+            execute();
+            memset(buforParsera, 0, rozmiarParser + 10);
+            rozmiarParser = 0;
+            koniecParser = 0;
+            break;
+        } else {
+            if (rozmiarGlowny == 0) {
+                pozycjaGlowny = 0;
+                rozmiarGlowny = read(0, buforGlowny, 2 * MAX_LINE_LENGTH);
             }
 
-            liniaZaDluga = 1;
-            koniecLinii = koniecLinii - start;
-            start = pozycjaBufor = pozycjaParser = 0;
-            end = k - 1;
-            koniecOstatniejLinii = -1;
-        }
-        for (pozycjaBufor = start; pozycjaBufor <= koniecLinii; ++pozycjaBufor, ++pozycjaParser) {
-            buforParsera[pozycjaParser] = buforGlowny[pozycjaBufor];
-            if (pozycjaBufor == end) {
-                if (buforGlowny[pozycjaBufor] == '\n') {
-                    buforParsera[pozycjaParser] = 0;
-                    koniecOstatniejLinii = end;
-                    przesuwanieBufora = 1;
-                    if (start != koniecLinii) {
-                        if (!liniaZaDluga)
-                            execute();
-                    }
-                    koniecKomendy = 1;
-                    memset(buforParsera, 0, MAX_LINE_LENGTH + 10);
-                    pozycjaParser = 0;
-                    if (liniaZaDluga) {
-                        pozycjaBufor = 0;
-                        memset(buforParsera, 0, MAX_LINE_LENGTH + 10);
-                        memset(buforGlowny, 0, 2 * MAX_LINE_LENGTH + 10);
-                        koniecOstatniejLinii = -1;
-                        koniecLinii = end = start = 0;
-                        przesuwanieBufora = 0;
-                        koniecKomendy = 0;
-                        liniaZaDluga = 0;
-                    }
-                }
-                return;
-            } else if (pozycjaBufor == koniecLinii) {
-                if (buforGlowny[pozycjaBufor] == '\n') {
-                    buforParsera[pozycjaParser] = 0;
-                    koniecOstatniejLinii = pozycjaBufor;
+            if (rozmiarGlowny == 0) {
+                exit(0);
+            }
+            if (rozmiarGlowny == -1) {
+                exit(1);
+            }
 
-                    if (start != koniecLinii) {
-                        przesuwanieBufora = 1;
-                        if (!liniaZaDluga)
-                            execute();
-                    }
+            int jestKoniec = 0;
 
-                    pozycjaBufor++;
-                    start = pozycjaBufor;
-                    koniecLinii = start;
-                    memset(buforParsera, 0, MAX_LINE_LENGTH + 10);
-                    pozycjaParser = 0;
-
-                    if (liniaZaDluga) liniaZaDluga = 0;
-
+            FOR(i, pozycjaGlowny, rozmiarGlowny - 1) {
+                if (buforGlowny[i] == '\n') {
+                    jestKoniec = 1;
                     break;
                 }
             }
+
+            if (jestKoniec == 1) {
+                FOR(i, pozycjaGlowny, rozmiarGlowny - 1) {
+                    if (buforGlowny[i] != '\n') {
+                        buforParsera[rozmiarParser] = buforGlowny[i];
+                        buforGlowny[i] = 0;
+                        rozmiarParser++;
+                    } else {
+                        break;
+                    }
+                }
+                pozycjaGlowny = i + 1;
+
+                if (1000 * pozycjaGlowny > 999 * rozmiarGlowny) {
+                    int start = i + 1;
+                    int where = 0;
+
+                    while (start < rozmiarGlowny) {
+                        buforGlowny[where] = buforGlowny[start];
+                        buforGlowny[start] = 0;
+                        start++;
+                        where++;
+                    }
+
+                    rozmiarGlowny = where;
+                    pozycjaGlowny = 0;
+                }
+                koniecParser = 1;
+            } else {
+                FOR(i, pozycjaGlowny, rozmiarGlowny - 1) {
+                    buforParsera[rozmiarParser] = buforGlowny[i];
+                    rozmiarParser++;
+                }
+                memset(buforGlowny, 0, 2 * rozmiarGlowny + 10);
+                rozmiarGlowny = 0;
+                pozycjaGlowny = 0;
+                koniecParser = 0;
+            }
+        }
+
+        if (rozmiarParser >= MAX_LINE_LENGTH) {
+            liniaZaDluga = 1;
+            memset(buforParsera, 0, rozmiarParser + 10);
+            rozmiarParser = 0;
+            koniecParser = 0;
+            SYNTAX();
         }
     }
 }
 
-//  petla główna
+
 int main(int argc, char *argv[]) {
-    przesuwanieBufora = liniaZaDluga = koniecKomendy = start = end = koniecLinii = pozycjaBufor = pozycjaParser = 0;
-    koniecOstatniejLinii = -1;
     if ((fstat(0, &typCzytania)) == -1) exit(1);
 
     while (1) {
         if (S_ISCHR(typCzytania.st_mode) && (!liniaZaDluga)) {
             write(1, PROMPT_STR, 2);
         }
-        getLines();
+
+        readline();
     }
 }
