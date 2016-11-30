@@ -18,8 +18,8 @@
 #define WRITE_END 1
 
 int i;
-char buforGlowny[4 * MAX_LINE_LENGTH + 10];
-char buforParsera[4 * MAX_LINE_LENGTH + 10];
+char buforGlowny[4 * 1000000 + 10];
+char buforParsera[4 * 1000000 + 10];
 int rozmiarGlowny = 0;
 int rozmiarParser = 0;
 int pozycjaGlowny = 0;
@@ -184,7 +184,6 @@ void execute() {
                     liczbaPrzekierowan++;
                 }
 
-
                 if (pipeSize - 1 != 0) {
                     if (comNumber == 0) {
                         close(pipes[comNumber][READ_END]);
@@ -245,14 +244,14 @@ void readline() {
     while (1) {
         if (koniecParser == 1) {
             execute();
-            memset(buforParsera, 0, rozmiarParser + 10);
+            memset(buforParsera, 0, 2 * rozmiarParser + 10);
             rozmiarParser = 0;
             koniecParser = 0;
             break;
         } else {
             if (rozmiarGlowny == 0) {
                 pozycjaGlowny = 0;
-                rozmiarGlowny = read(0, buforGlowny, 2 * MAX_LINE_LENGTH);
+                rozmiarGlowny = read(0, buforGlowny, 2 * 1000000);
             }
 
             if (rozmiarGlowny == 0) {
@@ -312,7 +311,7 @@ void readline() {
 
         if (rozmiarParser >= MAX_LINE_LENGTH) {
             liniaZaDluga = 1;
-            memset(buforParsera, 0, rozmiarParser + 10);
+            memset(buforParsera, 0, 2 * rozmiarParser + 10);
             rozmiarParser = 0;
             koniecParser = 0;
             SYNTAX();

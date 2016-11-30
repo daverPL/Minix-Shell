@@ -12,764 +12,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2ab1709-3d87-4027-bf11-6ed04aa3dbb8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oldVersion/mshell.c" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/builtins.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mshell.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils.o" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mshell" afterPath="$PROJECT_DIR$/mshell" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/teststr.tar.gz" afterPath="$PROJECT_DIR$/tests/test2/teststr.tar.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/.depend" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/.depend" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/teststr.tar.gz" afterPath="$PROJECT_DIR$/tests/test3/Test/teststr.tar.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/expected/1.err" afterPath="$PROJECT_DIR$/tests/test3/expected/1.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/expected/1.out" afterPath="$PROJECT_DIR$/tests/test3/expected/1.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/expected/2.err" afterPath="$PROJECT_DIR$/tests/test3/expected/2.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/expected/3.err" afterPath="$PROJECT_DIR$/tests/test3/expected/3.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/expected/4.err" afterPath="$PROJECT_DIR$/tests/test3/expected/4.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/expected/5.err" afterPath="$PROJECT_DIR$/tests/test3/expected/5.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/expected/6.err" afterPath="$PROJECT_DIR$/tests/test3/expected/6.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/expected/7.out" afterPath="$PROJECT_DIR$/tests/test3/expected/7.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/output/1.err" afterPath="$PROJECT_DIR$/tests/test3/output/1.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/output/1.out" afterPath="$PROJECT_DIR$/tests/test3/output/1.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/output/2.err" afterPath="$PROJECT_DIR$/tests/test3/output/2.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/output/3.err" afterPath="$PROJECT_DIR$/tests/test3/output/3.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/output/4.err" afterPath="$PROJECT_DIR$/tests/test3/output/4.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/output/5.err" afterPath="$PROJECT_DIR$/tests/test3/output/5.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/output/6.err" afterPath="$PROJECT_DIR$/tests/test3/output/6.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/output/7.out" afterPath="$PROJECT_DIR$/tests/test3/output/7.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/teststr.tar.gz" afterPath="$PROJECT_DIR$/tests/test3/teststr.tar.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/core.9017" afterPath="$PROJECT_DIR$/tests/test4/Test/core.9017" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/.depend" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/.depend" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/teststr.tar.gz" afterPath="$PROJECT_DIR$/tests/test4/Test/teststr.tar.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/expected/1.err" afterPath="$PROJECT_DIR$/tests/test4/expected/1.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/expected/2.err" afterPath="$PROJECT_DIR$/tests/test4/expected/2.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/expected/3.err" afterPath="$PROJECT_DIR$/tests/test4/expected/3.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/expected/5.err" afterPath="$PROJECT_DIR$/tests/test4/expected/5.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/expected/6.err" afterPath="$PROJECT_DIR$/tests/test4/expected/6.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/expected/7.err" afterPath="$PROJECT_DIR$/tests/test4/expected/7.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/output/1.err" afterPath="$PROJECT_DIR$/tests/test4/output/1.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/output/2.err" afterPath="$PROJECT_DIR$/tests/test4/output/2.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/output/3.err" afterPath="$PROJECT_DIR$/tests/test4/output/3.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/output/5.err" afterPath="$PROJECT_DIR$/tests/test4/output/5.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/output/6.err" afterPath="$PROJECT_DIR$/tests/test4/output/6.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/output/7.err" afterPath="$PROJECT_DIR$/tests/test4/output/7.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/teststr.tar.gz" afterPath="$PROJECT_DIR$/tests/test4/teststr.tar.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/expected/1.err" afterPath="$PROJECT_DIR$/tests/test5/expected/1.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/teststr.tar.gz" afterPath="$PROJECT_DIR$/tests/test5/teststr.tar.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/expected/1.err" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/expected/1.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/expected/11.err" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/expected/11.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/expected/12.err" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/expected/12.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/expected/13.err" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/expected/13.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/expected/15.err" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/expected/15.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/expected/2.err" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/expected/2.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/expected/3.err" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/expected/3.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/expected/5.err" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/expected/5.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/output/1.err" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/output/1.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/output/11.err" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/output/11.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/output/13.err" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/output/13.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/output/14.err" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/output/14.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/output/15.err" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/output/15.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/output/2.err" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/output/2.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/output/3.err" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/output/3.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/output/4.err" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/output/4.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/output/5.err" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/output/5.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/2/expected/1.err" afterPath="$PROJECT_DIR$/tests/testShell/suites/2/expected/1.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/2/expected/1.out" afterPath="$PROJECT_DIR$/tests/testShell/suites/2/expected/1.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/2/expected/2.err" afterPath="$PROJECT_DIR$/tests/testShell/suites/2/expected/2.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/2/expected/3.err" afterPath="$PROJECT_DIR$/tests/testShell/suites/2/expected/3.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/2/expected/4.err" afterPath="$PROJECT_DIR$/tests/testShell/suites/2/expected/4.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/2/expected/5.err" afterPath="$PROJECT_DIR$/tests/testShell/suites/2/expected/5.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/2/expected/6.err" afterPath="$PROJECT_DIR$/tests/testShell/suites/2/expected/6.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/2/expected/7.out" afterPath="$PROJECT_DIR$/tests/testShell/suites/2/expected/7.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/2/output/1.err" afterPath="$PROJECT_DIR$/tests/testShell/suites/2/output/1.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/2/output/1.out" afterPath="$PROJECT_DIR$/tests/testShell/suites/2/output/1.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/2/output/2.err" afterPath="$PROJECT_DIR$/tests/testShell/suites/2/output/2.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/2/output/3.err" afterPath="$PROJECT_DIR$/tests/testShell/suites/2/output/3.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/2/output/4.err" afterPath="$PROJECT_DIR$/tests/testShell/suites/2/output/4.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/2/output/5.err" afterPath="$PROJECT_DIR$/tests/testShell/suites/2/output/5.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/2/output/6.err" afterPath="$PROJECT_DIR$/tests/testShell/suites/2/output/6.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/2/output/7.out" afterPath="$PROJECT_DIR$/tests/testShell/suites/2/output/7.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/3/expected/1.err" afterPath="$PROJECT_DIR$/tests/testShell/suites/3/expected/1.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/3/expected/2.err" afterPath="$PROJECT_DIR$/tests/testShell/suites/3/expected/2.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/3/expected/3.err" afterPath="$PROJECT_DIR$/tests/testShell/suites/3/expected/3.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/3/expected/5.err" afterPath="$PROJECT_DIR$/tests/testShell/suites/3/expected/5.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/3/expected/6.err" afterPath="$PROJECT_DIR$/tests/testShell/suites/3/expected/6.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/3/expected/7.err" afterPath="$PROJECT_DIR$/tests/testShell/suites/3/expected/7.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/3/output/2.err" afterPath="$PROJECT_DIR$/tests/testShell/suites/3/output/2.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/3/output/3.err" afterPath="$PROJECT_DIR$/tests/testShell/suites/3/output/3.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/3/output/5.err" afterPath="$PROJECT_DIR$/tests/testShell/suites/3/output/5.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/3/output/6.err" afterPath="$PROJECT_DIR$/tests/testShell/suites/3/output/6.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/3/output/7.err" afterPath="$PROJECT_DIR$/tests/testShell/suites/3/output/7.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/4/expected/1.err" afterPath="$PROJECT_DIR$/tests/testShell/suites/4/expected/1.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/4/expected/4.err" afterPath="$PROJECT_DIR$/tests/testShell/suites/4/expected/4.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/4/output/1.err" afterPath="$PROJECT_DIR$/tests/testShell/suites/4/output/1.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/teststr.tar.gz" afterPath="$PROJECT_DIR$/tests/testShell/teststr.tar.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLinters/jscs.xml" afterPath="$PROJECT_DIR$/.idea/jsLinters/jscs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/shell.iml" afterPath="$PROJECT_DIR$/.idea/shell.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Makefile" afterPath="$PROJECT_DIR$/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/builtins.c" afterPath="$PROJECT_DIR$/builtins.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/builtins.h" afterPath="$PROJECT_DIR$/include/builtins.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/config.h" afterPath="$PROJECT_DIR$/include/config.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/siparse.h" afterPath="$PROJECT_DIR$/include/siparse.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/utils.h" afterPath="$PROJECT_DIR$/include/utils.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inputParse/Makefile" afterPath="$PROJECT_DIR$/inputParse/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inputParse/lex.yy.c" afterPath="$PROJECT_DIR$/inputParse/lex.yy.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inputParse/lex.yy.o" afterPath="$PROJECT_DIR$/inputParse/lex.yy.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inputParse/siparse.lex" afterPath="$PROJECT_DIR$/inputParse/siparse.lex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inputParse/siparse.y" afterPath="$PROJECT_DIR$/inputParse/siparse.y" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inputParse/siparseutils.c" afterPath="$PROJECT_DIR$/inputParse/siparseutils.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inputParse/siparseutils.h" afterPath="$PROJECT_DIR$/inputParse/siparseutils.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inputParse/siparseutils.o" afterPath="$PROJECT_DIR$/inputParse/siparseutils.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inputParse/y.tab.c" afterPath="$PROJECT_DIR$/inputParse/y.tab.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inputParse/y.tab.h" afterPath="$PROJECT_DIR$/inputParse/y.tab.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inputParse/y.tab.o" afterPath="$PROJECT_DIR$/inputParse/y.tab.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mshell.c" afterPath="$PROJECT_DIR$/mshell.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oldVersion/4wersja.cpp" afterPath="$PROJECT_DIR$/oldVersion/4wersja.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oldVersion/old.c" afterPath="$PROJECT_DIR$/oldVersion/old.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oldVersion/poTrzechEtapach.c" afterPath="$PROJECT_DIR$/oldVersion/poTrzechEtapach.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/planProjektu/etap1.txt" afterPath="$PROJECT_DIR$/planProjektu/etap1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/planProjektu/etap2.txt" afterPath="$PROJECT_DIR$/planProjektu/etap2.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/planProjektu/etap3.txt" afterPath="$PROJECT_DIR$/planProjektu/etap3.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/planProjektu/etap4.txt" afterPath="$PROJECT_DIR$/planProjektu/etap4.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/planProjektu/etap5.txt" afterPath="$PROJECT_DIR$/planProjektu/etap5.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/siparse.a" afterPath="$PROJECT_DIR$/siparse.a" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/Makefile" afterPath="$PROJECT_DIR$/tests/test2/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/common" afterPath="$PROJECT_DIR$/tests/test2/common" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/expected/1.out" afterPath="$PROJECT_DIR$/tests/test2/expected/1.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/expected/2.out" afterPath="$PROJECT_DIR$/tests/test2/expected/2.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/expected/3.out" afterPath="$PROJECT_DIR$/tests/test2/expected/3.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/expected/4.err" afterPath="$PROJECT_DIR$/tests/test2/expected/4.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/expected/4.out" afterPath="$PROJECT_DIR$/tests/test2/expected/4.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/expected/5.out" afterPath="$PROJECT_DIR$/tests/test2/expected/5.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/expected/6.err" afterPath="$PROJECT_DIR$/tests/test2/expected/6.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/expected/6.out" afterPath="$PROJECT_DIR$/tests/test2/expected/6.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/input/1.in" afterPath="$PROJECT_DIR$/tests/test2/input/1.in" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/input/2.in" afterPath="$PROJECT_DIR$/tests/test2/input/2.in" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/input/3.in" afterPath="$PROJECT_DIR$/tests/test2/input/3.in" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/input/4.in" afterPath="$PROJECT_DIR$/tests/test2/input/4.in" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/input/5.in" afterPath="$PROJECT_DIR$/tests/test2/input/5.in" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/input/6.in" afterPath="$PROJECT_DIR$/tests/test2/input/6.in" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/Makefile" afterPath="$PROJECT_DIR$/tests/test2/servers/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/fs/Makefile" afterPath="$PROJECT_DIR$/tests/test2/servers/fs/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/fs/buf.h" afterPath="$PROJECT_DIR$/tests/test2/servers/fs/buf.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/fs/cache.c" afterPath="$PROJECT_DIR$/tests/test2/servers/fs/cache.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/fs/cdprobe.c" afterPath="$PROJECT_DIR$/tests/test2/servers/fs/cdprobe.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/fs/const.h" afterPath="$PROJECT_DIR$/tests/test2/servers/fs/const.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/fs/device.c" afterPath="$PROJECT_DIR$/tests/test2/servers/fs/device.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/fs/dmap.c" afterPath="$PROJECT_DIR$/tests/test2/servers/fs/dmap.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/fs/file.h" afterPath="$PROJECT_DIR$/tests/test2/servers/fs/file.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/fs/filedes.c" afterPath="$PROJECT_DIR$/tests/test2/servers/fs/filedes.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/fs/fproc.h" afterPath="$PROJECT_DIR$/tests/test2/servers/fs/fproc.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/fs/fs.h" afterPath="$PROJECT_DIR$/tests/test2/servers/fs/fs.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/fs/glo.h" afterPath="$PROJECT_DIR$/tests/test2/servers/fs/glo.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/fs/inode.c" afterPath="$PROJECT_DIR$/tests/test2/servers/fs/inode.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/fs/inode.h" afterPath="$PROJECT_DIR$/tests/test2/servers/fs/inode.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/fs/link.c" afterPath="$PROJECT_DIR$/tests/test2/servers/fs/link.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/fs/lock.c" afterPath="$PROJECT_DIR$/tests/test2/servers/fs/lock.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/fs/lock.h" afterPath="$PROJECT_DIR$/tests/test2/servers/fs/lock.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/fs/main.c" afterPath="$PROJECT_DIR$/tests/test2/servers/fs/main.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/fs/misc.c" afterPath="$PROJECT_DIR$/tests/test2/servers/fs/misc.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/fs/mount.c" afterPath="$PROJECT_DIR$/tests/test2/servers/fs/mount.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/fs/open.c" afterPath="$PROJECT_DIR$/tests/test2/servers/fs/open.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/fs/param.h" afterPath="$PROJECT_DIR$/tests/test2/servers/fs/param.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/fs/path.c" afterPath="$PROJECT_DIR$/tests/test2/servers/fs/path.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/fs/pipe.c" afterPath="$PROJECT_DIR$/tests/test2/servers/fs/pipe.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/fs/protect.c" afterPath="$PROJECT_DIR$/tests/test2/servers/fs/protect.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/fs/proto.h" afterPath="$PROJECT_DIR$/tests/test2/servers/fs/proto.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/fs/read.c" afterPath="$PROJECT_DIR$/tests/test2/servers/fs/read.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/fs/select.c" afterPath="$PROJECT_DIR$/tests/test2/servers/fs/select.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/fs/select.h" afterPath="$PROJECT_DIR$/tests/test2/servers/fs/select.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/fs/stadir.c" afterPath="$PROJECT_DIR$/tests/test2/servers/fs/stadir.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/fs/super.c" afterPath="$PROJECT_DIR$/tests/test2/servers/fs/super.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/fs/super.h" afterPath="$PROJECT_DIR$/tests/test2/servers/fs/super.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/fs/table.c" afterPath="$PROJECT_DIR$/tests/test2/servers/fs/table.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/fs/time.c" afterPath="$PROJECT_DIR$/tests/test2/servers/fs/time.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/fs/timers.c" afterPath="$PROJECT_DIR$/tests/test2/servers/fs/timers.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/fs/type.h" afterPath="$PROJECT_DIR$/tests/test2/servers/fs/type.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/fs/utility.c" afterPath="$PROJECT_DIR$/tests/test2/servers/fs/utility.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/fs/write.c" afterPath="$PROJECT_DIR$/tests/test2/servers/fs/write.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/init/Makefile" afterPath="$PROJECT_DIR$/tests/test2/servers/init/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/init/init.c" afterPath="$PROJECT_DIR$/tests/test2/servers/init/init.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/pm/Makefile" afterPath="$PROJECT_DIR$/tests/test2/servers/pm/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/pm/alloc.c" afterPath="$PROJECT_DIR$/tests/test2/servers/pm/alloc.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/pm/break.c" afterPath="$PROJECT_DIR$/tests/test2/servers/pm/break.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/pm/const.h" afterPath="$PROJECT_DIR$/tests/test2/servers/pm/const.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/pm/exec.c" afterPath="$PROJECT_DIR$/tests/test2/servers/pm/exec.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/pm/forkexit.c" afterPath="$PROJECT_DIR$/tests/test2/servers/pm/forkexit.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/pm/getset.c" afterPath="$PROJECT_DIR$/tests/test2/servers/pm/getset.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/pm/glo.h" afterPath="$PROJECT_DIR$/tests/test2/servers/pm/glo.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/pm/main.c" afterPath="$PROJECT_DIR$/tests/test2/servers/pm/main.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/pm/misc.c" afterPath="$PROJECT_DIR$/tests/test2/servers/pm/misc.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/pm/mproc.h" afterPath="$PROJECT_DIR$/tests/test2/servers/pm/mproc.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/pm/param.h" afterPath="$PROJECT_DIR$/tests/test2/servers/pm/param.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/pm/pm.h" afterPath="$PROJECT_DIR$/tests/test2/servers/pm/pm.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/pm/proto.h" afterPath="$PROJECT_DIR$/tests/test2/servers/pm/proto.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/pm/signal.c" afterPath="$PROJECT_DIR$/tests/test2/servers/pm/signal.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/pm/table.c" afterPath="$PROJECT_DIR$/tests/test2/servers/pm/table.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/pm/time.c" afterPath="$PROJECT_DIR$/tests/test2/servers/pm/time.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/pm/timers.c" afterPath="$PROJECT_DIR$/tests/test2/servers/pm/timers.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/pm/trace.c" afterPath="$PROJECT_DIR$/tests/test2/servers/pm/trace.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/pm/type.h" afterPath="$PROJECT_DIR$/tests/test2/servers/pm/type.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/pm/utility.c" afterPath="$PROJECT_DIR$/tests/test2/servers/pm/utility.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/rs/Makefile" afterPath="$PROJECT_DIR$/tests/test2/servers/rs/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/rs/manager.c" afterPath="$PROJECT_DIR$/tests/test2/servers/rs/manager.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/rs/proto.h" afterPath="$PROJECT_DIR$/tests/test2/servers/rs/proto.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/rs/rs.c" afterPath="$PROJECT_DIR$/tests/test2/servers/rs/rs.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/rs/rs.h" afterPath="$PROJECT_DIR$/tests/test2/servers/rs/rs.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/servers/rs/service.c" afterPath="$PROJECT_DIR$/tests/test2/servers/rs/service.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test2/src/splitter.c" afterPath="$PROJECT_DIR$/tests/test2/src/splitter.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Makefile" afterPath="$PROJECT_DIR$/tests/test3/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/README.txt" afterPath="$PROJECT_DIR$/tests/test3/README.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/Makefile" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/fs/.depend" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/fs/.depend" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/fs/Makefile" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/fs/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/fs/buf.h" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/fs/buf.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/fs/cache.c" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/fs/cache.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/fs/cdprobe.c" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/fs/cdprobe.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/fs/const.h" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/fs/const.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/fs/device.c" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/fs/device.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/fs/dmap.c" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/fs/dmap.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/fs/file.h" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/fs/file.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/fs/filedes.c" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/fs/filedes.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/fs/fproc.h" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/fs/fproc.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/fs/fs.h" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/fs/fs.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/fs/glo.h" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/fs/glo.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/fs/inode.c" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/fs/inode.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/fs/inode.h" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/fs/inode.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/fs/link.c" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/fs/link.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/fs/lock.c" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/fs/lock.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/fs/lock.h" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/fs/lock.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/fs/main.c" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/fs/main.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/fs/misc.c" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/fs/misc.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/fs/mount.c" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/fs/mount.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/fs/open.c" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/fs/open.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/fs/param.h" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/fs/param.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/fs/path.c" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/fs/path.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/fs/pipe.c" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/fs/pipe.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/fs/protect.c" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/fs/protect.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/fs/proto.h" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/fs/proto.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/fs/read.c" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/fs/read.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/fs/select.c" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/fs/select.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/fs/select.h" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/fs/select.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/fs/stadir.c" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/fs/stadir.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/fs/super.c" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/fs/super.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/fs/super.h" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/fs/super.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/fs/table.c" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/fs/table.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/fs/time.c" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/fs/time.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/fs/timers.c" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/fs/timers.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/fs/type.h" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/fs/type.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/fs/utility.c" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/fs/utility.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/fs/write.c" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/fs/write.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/init/.depend" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/init/.depend" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/init/Makefile" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/init/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/init/init.c" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/init/init.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/pm/.depend" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/pm/.depend" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/pm/Makefile" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/pm/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/pm/alloc.c" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/pm/alloc.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/pm/break.c" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/pm/break.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/pm/const.h" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/pm/const.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/pm/exec.c" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/pm/exec.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/pm/forkexit.c" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/pm/forkexit.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/pm/getset.c" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/pm/getset.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/pm/glo.h" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/pm/glo.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/pm/main.c" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/pm/main.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/pm/misc.c" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/pm/misc.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/pm/mproc.h" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/pm/mproc.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/pm/param.h" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/pm/param.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/pm/pm.h" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/pm/pm.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/pm/proto.h" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/pm/proto.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/pm/signal.c" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/pm/signal.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/pm/table.c" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/pm/table.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/pm/time.c" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/pm/time.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/pm/timers.c" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/pm/timers.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/pm/trace.c" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/pm/trace.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/pm/type.h" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/pm/type.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/pm/utility.c" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/pm/utility.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/rs/.depend" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/rs/.depend" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/rs/Makefile" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/rs/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/rs/manager.c" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/rs/manager.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/rs/proto.h" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/rs/proto.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/rs/rs.c" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/rs/rs.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/rs/rs.h" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/rs/rs.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/Test/servers/rs/service.c" afterPath="$PROJECT_DIR$/tests/test3/Test/servers/rs/service.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/common" afterPath="$PROJECT_DIR$/tests/test3/common" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/exec/4.exec" afterPath="$PROJECT_DIR$/tests/test3/exec/4.exec" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/exec/5.exec" afterPath="$PROJECT_DIR$/tests/test3/exec/5.exec" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/exec/6.exec" afterPath="$PROJECT_DIR$/tests/test3/exec/6.exec" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/expected/2.out" afterPath="$PROJECT_DIR$/tests/test3/expected/2.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/expected/3.gen" afterPath="$PROJECT_DIR$/tests/test3/expected/3.gen" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/expected/3.out" afterPath="$PROJECT_DIR$/tests/test3/expected/3.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/expected/4.out" afterPath="$PROJECT_DIR$/tests/test3/expected/4.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/expected/5.out" afterPath="$PROJECT_DIR$/tests/test3/expected/5.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/expected/6.out" afterPath="$PROJECT_DIR$/tests/test3/expected/6.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/expected/7.err" afterPath="$PROJECT_DIR$/tests/test3/expected/7.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/input/1.in" afterPath="$PROJECT_DIR$/tests/test3/input/1.in" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/input/2.in" afterPath="$PROJECT_DIR$/tests/test3/input/2.in" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/input/3.in" afterPath="$PROJECT_DIR$/tests/test3/input/3.in" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/input/4.in" afterPath="$PROJECT_DIR$/tests/test3/input/4.in" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/input/5.in" afterPath="$PROJECT_DIR$/tests/test3/input/5.in" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/input/6.in" afterPath="$PROJECT_DIR$/tests/test3/input/6.in" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/input/7.in" afterPath="$PROJECT_DIR$/tests/test3/input/7.in" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/output/2.out" afterPath="$PROJECT_DIR$/tests/test3/output/2.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/output/3.out" afterPath="$PROJECT_DIR$/tests/test3/output/3.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/output/4.out" afterPath="$PROJECT_DIR$/tests/test3/output/4.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/output/5.out" afterPath="$PROJECT_DIR$/tests/test3/output/5.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/output/6.out" afterPath="$PROJECT_DIR$/tests/test3/output/6.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/output/7.err" afterPath="$PROJECT_DIR$/tests/test3/output/7.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/Makefile" afterPath="$PROJECT_DIR$/tests/test3/servers/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/fs/Makefile" afterPath="$PROJECT_DIR$/tests/test3/servers/fs/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/fs/buf.h" afterPath="$PROJECT_DIR$/tests/test3/servers/fs/buf.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/fs/cache.c" afterPath="$PROJECT_DIR$/tests/test3/servers/fs/cache.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/fs/cdprobe.c" afterPath="$PROJECT_DIR$/tests/test3/servers/fs/cdprobe.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/fs/const.h" afterPath="$PROJECT_DIR$/tests/test3/servers/fs/const.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/fs/device.c" afterPath="$PROJECT_DIR$/tests/test3/servers/fs/device.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/fs/dmap.c" afterPath="$PROJECT_DIR$/tests/test3/servers/fs/dmap.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/fs/file.h" afterPath="$PROJECT_DIR$/tests/test3/servers/fs/file.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/fs/filedes.c" afterPath="$PROJECT_DIR$/tests/test3/servers/fs/filedes.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/fs/fproc.h" afterPath="$PROJECT_DIR$/tests/test3/servers/fs/fproc.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/fs/fs.h" afterPath="$PROJECT_DIR$/tests/test3/servers/fs/fs.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/fs/glo.h" afterPath="$PROJECT_DIR$/tests/test3/servers/fs/glo.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/fs/inode.c" afterPath="$PROJECT_DIR$/tests/test3/servers/fs/inode.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/fs/inode.h" afterPath="$PROJECT_DIR$/tests/test3/servers/fs/inode.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/fs/link.c" afterPath="$PROJECT_DIR$/tests/test3/servers/fs/link.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/fs/lock.c" afterPath="$PROJECT_DIR$/tests/test3/servers/fs/lock.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/fs/lock.h" afterPath="$PROJECT_DIR$/tests/test3/servers/fs/lock.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/fs/main.c" afterPath="$PROJECT_DIR$/tests/test3/servers/fs/main.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/fs/misc.c" afterPath="$PROJECT_DIR$/tests/test3/servers/fs/misc.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/fs/mount.c" afterPath="$PROJECT_DIR$/tests/test3/servers/fs/mount.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/fs/open.c" afterPath="$PROJECT_DIR$/tests/test3/servers/fs/open.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/fs/param.h" afterPath="$PROJECT_DIR$/tests/test3/servers/fs/param.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/fs/path.c" afterPath="$PROJECT_DIR$/tests/test3/servers/fs/path.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/fs/pipe.c" afterPath="$PROJECT_DIR$/tests/test3/servers/fs/pipe.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/fs/protect.c" afterPath="$PROJECT_DIR$/tests/test3/servers/fs/protect.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/fs/proto.h" afterPath="$PROJECT_DIR$/tests/test3/servers/fs/proto.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/fs/read.c" afterPath="$PROJECT_DIR$/tests/test3/servers/fs/read.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/fs/select.c" afterPath="$PROJECT_DIR$/tests/test3/servers/fs/select.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/fs/select.h" afterPath="$PROJECT_DIR$/tests/test3/servers/fs/select.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/fs/stadir.c" afterPath="$PROJECT_DIR$/tests/test3/servers/fs/stadir.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/fs/super.c" afterPath="$PROJECT_DIR$/tests/test3/servers/fs/super.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/fs/super.h" afterPath="$PROJECT_DIR$/tests/test3/servers/fs/super.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/fs/table.c" afterPath="$PROJECT_DIR$/tests/test3/servers/fs/table.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/fs/time.c" afterPath="$PROJECT_DIR$/tests/test3/servers/fs/time.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/fs/timers.c" afterPath="$PROJECT_DIR$/tests/test3/servers/fs/timers.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/fs/type.h" afterPath="$PROJECT_DIR$/tests/test3/servers/fs/type.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/fs/utility.c" afterPath="$PROJECT_DIR$/tests/test3/servers/fs/utility.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/fs/write.c" afterPath="$PROJECT_DIR$/tests/test3/servers/fs/write.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/init/Makefile" afterPath="$PROJECT_DIR$/tests/test3/servers/init/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/init/init.c" afterPath="$PROJECT_DIR$/tests/test3/servers/init/init.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/pm/Makefile" afterPath="$PROJECT_DIR$/tests/test3/servers/pm/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/pm/alloc.c" afterPath="$PROJECT_DIR$/tests/test3/servers/pm/alloc.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/pm/break.c" afterPath="$PROJECT_DIR$/tests/test3/servers/pm/break.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/pm/const.h" afterPath="$PROJECT_DIR$/tests/test3/servers/pm/const.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/pm/exec.c" afterPath="$PROJECT_DIR$/tests/test3/servers/pm/exec.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/pm/forkexit.c" afterPath="$PROJECT_DIR$/tests/test3/servers/pm/forkexit.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/pm/getset.c" afterPath="$PROJECT_DIR$/tests/test3/servers/pm/getset.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/pm/glo.h" afterPath="$PROJECT_DIR$/tests/test3/servers/pm/glo.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/pm/main.c" afterPath="$PROJECT_DIR$/tests/test3/servers/pm/main.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/pm/misc.c" afterPath="$PROJECT_DIR$/tests/test3/servers/pm/misc.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/pm/mproc.h" afterPath="$PROJECT_DIR$/tests/test3/servers/pm/mproc.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/pm/param.h" afterPath="$PROJECT_DIR$/tests/test3/servers/pm/param.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/pm/pm.h" afterPath="$PROJECT_DIR$/tests/test3/servers/pm/pm.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/pm/proto.h" afterPath="$PROJECT_DIR$/tests/test3/servers/pm/proto.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/pm/signal.c" afterPath="$PROJECT_DIR$/tests/test3/servers/pm/signal.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/pm/table.c" afterPath="$PROJECT_DIR$/tests/test3/servers/pm/table.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/pm/time.c" afterPath="$PROJECT_DIR$/tests/test3/servers/pm/time.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/pm/timers.c" afterPath="$PROJECT_DIR$/tests/test3/servers/pm/timers.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/pm/trace.c" afterPath="$PROJECT_DIR$/tests/test3/servers/pm/trace.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/pm/type.h" afterPath="$PROJECT_DIR$/tests/test3/servers/pm/type.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/pm/utility.c" afterPath="$PROJECT_DIR$/tests/test3/servers/pm/utility.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/rs/Makefile" afterPath="$PROJECT_DIR$/tests/test3/servers/rs/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/rs/manager.c" afterPath="$PROJECT_DIR$/tests/test3/servers/rs/manager.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/rs/proto.h" afterPath="$PROJECT_DIR$/tests/test3/servers/rs/proto.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/rs/rs.c" afterPath="$PROJECT_DIR$/tests/test3/servers/rs/rs.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/rs/rs.h" afterPath="$PROJECT_DIR$/tests/test3/servers/rs/rs.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/servers/rs/service.c" afterPath="$PROJECT_DIR$/tests/test3/servers/rs/service.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test3/src/catcher.c" afterPath="$PROJECT_DIR$/tests/test3/src/catcher.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Makefile" afterPath="$PROJECT_DIR$/tests/test4/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/README.txt" afterPath="$PROJECT_DIR$/tests/test4/README.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/Makefile" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/fs/.depend" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/fs/.depend" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/fs/Makefile" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/fs/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/fs/buf.h" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/fs/buf.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/fs/cache.c" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/fs/cache.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/fs/cdprobe.c" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/fs/cdprobe.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/fs/const.h" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/fs/const.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/fs/device.c" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/fs/device.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/fs/dmap.c" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/fs/dmap.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/fs/file.h" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/fs/file.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/fs/filedes.c" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/fs/filedes.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/fs/fproc.h" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/fs/fproc.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/fs/fs.h" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/fs/fs.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/fs/glo.h" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/fs/glo.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/fs/inode.c" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/fs/inode.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/fs/inode.h" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/fs/inode.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/fs/link.c" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/fs/link.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/fs/lock.c" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/fs/lock.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/fs/lock.h" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/fs/lock.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/fs/main.c" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/fs/main.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/fs/misc.c" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/fs/misc.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/fs/mount.c" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/fs/mount.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/fs/open.c" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/fs/open.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/fs/param.h" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/fs/param.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/fs/path.c" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/fs/path.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/fs/pipe.c" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/fs/pipe.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/fs/protect.c" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/fs/protect.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/fs/proto.h" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/fs/proto.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/fs/read.c" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/fs/read.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/fs/select.c" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/fs/select.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/fs/select.h" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/fs/select.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/fs/stadir.c" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/fs/stadir.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/fs/super.c" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/fs/super.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/fs/super.h" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/fs/super.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/fs/table.c" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/fs/table.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/fs/time.c" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/fs/time.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/fs/timers.c" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/fs/timers.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/fs/type.h" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/fs/type.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/fs/utility.c" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/fs/utility.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/fs/write.c" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/fs/write.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/init/.depend" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/init/.depend" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/init/Makefile" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/init/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/init/init.c" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/init/init.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/pm/.depend" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/pm/.depend" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/pm/Makefile" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/pm/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/pm/alloc.c" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/pm/alloc.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/pm/break.c" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/pm/break.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/pm/const.h" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/pm/const.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/pm/exec.c" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/pm/exec.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/pm/forkexit.c" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/pm/forkexit.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/pm/getset.c" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/pm/getset.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/pm/glo.h" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/pm/glo.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/pm/main.c" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/pm/main.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/pm/misc.c" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/pm/misc.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/pm/mproc.h" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/pm/mproc.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/pm/param.h" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/pm/param.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/pm/pm.h" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/pm/pm.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/pm/proto.h" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/pm/proto.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/pm/signal.c" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/pm/signal.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/pm/table.c" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/pm/table.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/pm/time.c" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/pm/time.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/pm/timers.c" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/pm/timers.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/pm/trace.c" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/pm/trace.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/pm/type.h" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/pm/type.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/pm/utility.c" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/pm/utility.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/rs/.depend" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/rs/.depend" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/rs/Makefile" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/rs/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/rs/manager.c" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/rs/manager.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/rs/proto.h" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/rs/proto.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/rs/rs.c" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/rs/rs.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/rs/rs.h" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/rs/rs.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/Test/servers/rs/service.c" afterPath="$PROJECT_DIR$/tests/test4/Test/servers/rs/service.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/common" afterPath="$PROJECT_DIR$/tests/test4/common" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/expected/1.out" afterPath="$PROJECT_DIR$/tests/test4/expected/1.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/expected/2.out" afterPath="$PROJECT_DIR$/tests/test4/expected/2.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/expected/3.out" afterPath="$PROJECT_DIR$/tests/test4/expected/3.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/expected/4.err" afterPath="$PROJECT_DIR$/tests/test4/expected/4.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/expected/4.out" afterPath="$PROJECT_DIR$/tests/test4/expected/4.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/expected/5.out" afterPath="$PROJECT_DIR$/tests/test4/expected/5.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/expected/6.out" afterPath="$PROJECT_DIR$/tests/test4/expected/6.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/expected/7.out" afterPath="$PROJECT_DIR$/tests/test4/expected/7.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/input/1.in" afterPath="$PROJECT_DIR$/tests/test4/input/1.in" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/input/2.in" afterPath="$PROJECT_DIR$/tests/test4/input/2.in" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/input/3.in" afterPath="$PROJECT_DIR$/tests/test4/input/3.in" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/input/4.in" afterPath="$PROJECT_DIR$/tests/test4/input/4.in" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/input/5.in" afterPath="$PROJECT_DIR$/tests/test4/input/5.in" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/input/6.in" afterPath="$PROJECT_DIR$/tests/test4/input/6.in" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/input/7.in" afterPath="$PROJECT_DIR$/tests/test4/input/7.in" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/output/1.out" afterPath="$PROJECT_DIR$/tests/test4/output/1.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/output/2.out" afterPath="$PROJECT_DIR$/tests/test4/output/2.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/output/3.out" afterPath="$PROJECT_DIR$/tests/test4/output/3.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/output/4.err" afterPath="$PROJECT_DIR$/tests/test4/output/4.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/output/4.out" afterPath="$PROJECT_DIR$/tests/test4/output/4.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/output/5.out" afterPath="$PROJECT_DIR$/tests/test4/output/5.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/output/6.out" afterPath="$PROJECT_DIR$/tests/test4/output/6.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/output/7.out" afterPath="$PROJECT_DIR$/tests/test4/output/7.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/Makefile" afterPath="$PROJECT_DIR$/tests/test4/servers/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/fs/Makefile" afterPath="$PROJECT_DIR$/tests/test4/servers/fs/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/fs/buf.h" afterPath="$PROJECT_DIR$/tests/test4/servers/fs/buf.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/fs/cache.c" afterPath="$PROJECT_DIR$/tests/test4/servers/fs/cache.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/fs/cdprobe.c" afterPath="$PROJECT_DIR$/tests/test4/servers/fs/cdprobe.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/fs/const.h" afterPath="$PROJECT_DIR$/tests/test4/servers/fs/const.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/fs/device.c" afterPath="$PROJECT_DIR$/tests/test4/servers/fs/device.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/fs/dmap.c" afterPath="$PROJECT_DIR$/tests/test4/servers/fs/dmap.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/fs/file.h" afterPath="$PROJECT_DIR$/tests/test4/servers/fs/file.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/fs/filedes.c" afterPath="$PROJECT_DIR$/tests/test4/servers/fs/filedes.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/fs/fproc.h" afterPath="$PROJECT_DIR$/tests/test4/servers/fs/fproc.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/fs/fs.h" afterPath="$PROJECT_DIR$/tests/test4/servers/fs/fs.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/fs/glo.h" afterPath="$PROJECT_DIR$/tests/test4/servers/fs/glo.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/fs/inode.c" afterPath="$PROJECT_DIR$/tests/test4/servers/fs/inode.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/fs/inode.h" afterPath="$PROJECT_DIR$/tests/test4/servers/fs/inode.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/fs/link.c" afterPath="$PROJECT_DIR$/tests/test4/servers/fs/link.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/fs/lock.c" afterPath="$PROJECT_DIR$/tests/test4/servers/fs/lock.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/fs/lock.h" afterPath="$PROJECT_DIR$/tests/test4/servers/fs/lock.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/fs/main.c" afterPath="$PROJECT_DIR$/tests/test4/servers/fs/main.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/fs/misc.c" afterPath="$PROJECT_DIR$/tests/test4/servers/fs/misc.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/fs/mount.c" afterPath="$PROJECT_DIR$/tests/test4/servers/fs/mount.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/fs/open.c" afterPath="$PROJECT_DIR$/tests/test4/servers/fs/open.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/fs/param.h" afterPath="$PROJECT_DIR$/tests/test4/servers/fs/param.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/fs/path.c" afterPath="$PROJECT_DIR$/tests/test4/servers/fs/path.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/fs/pipe.c" afterPath="$PROJECT_DIR$/tests/test4/servers/fs/pipe.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/fs/protect.c" afterPath="$PROJECT_DIR$/tests/test4/servers/fs/protect.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/fs/proto.h" afterPath="$PROJECT_DIR$/tests/test4/servers/fs/proto.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/fs/read.c" afterPath="$PROJECT_DIR$/tests/test4/servers/fs/read.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/fs/select.c" afterPath="$PROJECT_DIR$/tests/test4/servers/fs/select.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/fs/select.h" afterPath="$PROJECT_DIR$/tests/test4/servers/fs/select.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/fs/stadir.c" afterPath="$PROJECT_DIR$/tests/test4/servers/fs/stadir.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/fs/super.c" afterPath="$PROJECT_DIR$/tests/test4/servers/fs/super.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/fs/super.h" afterPath="$PROJECT_DIR$/tests/test4/servers/fs/super.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/fs/table.c" afterPath="$PROJECT_DIR$/tests/test4/servers/fs/table.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/fs/time.c" afterPath="$PROJECT_DIR$/tests/test4/servers/fs/time.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/fs/timers.c" afterPath="$PROJECT_DIR$/tests/test4/servers/fs/timers.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/fs/type.h" afterPath="$PROJECT_DIR$/tests/test4/servers/fs/type.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/fs/utility.c" afterPath="$PROJECT_DIR$/tests/test4/servers/fs/utility.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/fs/write.c" afterPath="$PROJECT_DIR$/tests/test4/servers/fs/write.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/init/Makefile" afterPath="$PROJECT_DIR$/tests/test4/servers/init/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/init/init.c" afterPath="$PROJECT_DIR$/tests/test4/servers/init/init.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/pm/Makefile" afterPath="$PROJECT_DIR$/tests/test4/servers/pm/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/pm/alloc.c" afterPath="$PROJECT_DIR$/tests/test4/servers/pm/alloc.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/pm/break.c" afterPath="$PROJECT_DIR$/tests/test4/servers/pm/break.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/pm/const.h" afterPath="$PROJECT_DIR$/tests/test4/servers/pm/const.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/pm/exec.c" afterPath="$PROJECT_DIR$/tests/test4/servers/pm/exec.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/pm/forkexit.c" afterPath="$PROJECT_DIR$/tests/test4/servers/pm/forkexit.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/pm/getset.c" afterPath="$PROJECT_DIR$/tests/test4/servers/pm/getset.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/pm/glo.h" afterPath="$PROJECT_DIR$/tests/test4/servers/pm/glo.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/pm/main.c" afterPath="$PROJECT_DIR$/tests/test4/servers/pm/main.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/pm/misc.c" afterPath="$PROJECT_DIR$/tests/test4/servers/pm/misc.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/pm/mproc.h" afterPath="$PROJECT_DIR$/tests/test4/servers/pm/mproc.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/pm/param.h" afterPath="$PROJECT_DIR$/tests/test4/servers/pm/param.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/pm/pm.h" afterPath="$PROJECT_DIR$/tests/test4/servers/pm/pm.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/pm/proto.h" afterPath="$PROJECT_DIR$/tests/test4/servers/pm/proto.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/pm/signal.c" afterPath="$PROJECT_DIR$/tests/test4/servers/pm/signal.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/pm/table.c" afterPath="$PROJECT_DIR$/tests/test4/servers/pm/table.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/pm/time.c" afterPath="$PROJECT_DIR$/tests/test4/servers/pm/time.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/pm/timers.c" afterPath="$PROJECT_DIR$/tests/test4/servers/pm/timers.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/pm/trace.c" afterPath="$PROJECT_DIR$/tests/test4/servers/pm/trace.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/pm/type.h" afterPath="$PROJECT_DIR$/tests/test4/servers/pm/type.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/pm/utility.c" afterPath="$PROJECT_DIR$/tests/test4/servers/pm/utility.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/rs/Makefile" afterPath="$PROJECT_DIR$/tests/test4/servers/rs/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/rs/manager.c" afterPath="$PROJECT_DIR$/tests/test4/servers/rs/manager.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/rs/proto.h" afterPath="$PROJECT_DIR$/tests/test4/servers/rs/proto.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/rs/rs.c" afterPath="$PROJECT_DIR$/tests/test4/servers/rs/rs.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/rs/rs.h" afterPath="$PROJECT_DIR$/tests/test4/servers/rs/rs.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/servers/rs/service.c" afterPath="$PROJECT_DIR$/tests/test4/servers/rs/service.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/src/decho.c" afterPath="$PROJECT_DIR$/tests/test4/src/decho.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test4/src/fdcounter.c" afterPath="$PROJECT_DIR$/tests/test4/src/fdcounter.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/Makefile" afterPath="$PROJECT_DIR$/tests/test5/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/README.txt" afterPath="$PROJECT_DIR$/tests/test5/README.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/common" afterPath="$PROJECT_DIR$/tests/test5/common" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/exec/1.exec" afterPath="$PROJECT_DIR$/tests/test5/exec/1.exec" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/exec/2.exec" afterPath="$PROJECT_DIR$/tests/test5/exec/2.exec" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/exec/3.exec" afterPath="$PROJECT_DIR$/tests/test5/exec/3.exec" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/expected/1.out" afterPath="$PROJECT_DIR$/tests/test5/expected/1.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/expected/2.out" afterPath="$PROJECT_DIR$/tests/test5/expected/2.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/expected/3.out" afterPath="$PROJECT_DIR$/tests/test5/expected/3.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/input/1.in" afterPath="$PROJECT_DIR$/tests/test5/input/1.in" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/input/2.in" afterPath="$PROJECT_DIR$/tests/test5/input/2.in" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/input/3.in" afterPath="$PROJECT_DIR$/tests/test5/input/3.in" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/Makefile" afterPath="$PROJECT_DIR$/tests/test5/servers/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/fs/Makefile" afterPath="$PROJECT_DIR$/tests/test5/servers/fs/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/fs/buf.h" afterPath="$PROJECT_DIR$/tests/test5/servers/fs/buf.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/fs/cache.c" afterPath="$PROJECT_DIR$/tests/test5/servers/fs/cache.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/fs/cdprobe.c" afterPath="$PROJECT_DIR$/tests/test5/servers/fs/cdprobe.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/fs/const.h" afterPath="$PROJECT_DIR$/tests/test5/servers/fs/const.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/fs/device.c" afterPath="$PROJECT_DIR$/tests/test5/servers/fs/device.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/fs/dmap.c" afterPath="$PROJECT_DIR$/tests/test5/servers/fs/dmap.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/fs/file.h" afterPath="$PROJECT_DIR$/tests/test5/servers/fs/file.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/fs/filedes.c" afterPath="$PROJECT_DIR$/tests/test5/servers/fs/filedes.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/fs/fproc.h" afterPath="$PROJECT_DIR$/tests/test5/servers/fs/fproc.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/fs/fs.h" afterPath="$PROJECT_DIR$/tests/test5/servers/fs/fs.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/fs/glo.h" afterPath="$PROJECT_DIR$/tests/test5/servers/fs/glo.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/fs/inode.c" afterPath="$PROJECT_DIR$/tests/test5/servers/fs/inode.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/fs/inode.h" afterPath="$PROJECT_DIR$/tests/test5/servers/fs/inode.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/fs/link.c" afterPath="$PROJECT_DIR$/tests/test5/servers/fs/link.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/fs/lock.c" afterPath="$PROJECT_DIR$/tests/test5/servers/fs/lock.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/fs/lock.h" afterPath="$PROJECT_DIR$/tests/test5/servers/fs/lock.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/fs/main.c" afterPath="$PROJECT_DIR$/tests/test5/servers/fs/main.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/fs/misc.c" afterPath="$PROJECT_DIR$/tests/test5/servers/fs/misc.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/fs/mount.c" afterPath="$PROJECT_DIR$/tests/test5/servers/fs/mount.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/fs/open.c" afterPath="$PROJECT_DIR$/tests/test5/servers/fs/open.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/fs/param.h" afterPath="$PROJECT_DIR$/tests/test5/servers/fs/param.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/fs/path.c" afterPath="$PROJECT_DIR$/tests/test5/servers/fs/path.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/fs/pipe.c" afterPath="$PROJECT_DIR$/tests/test5/servers/fs/pipe.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/fs/protect.c" afterPath="$PROJECT_DIR$/tests/test5/servers/fs/protect.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/fs/proto.h" afterPath="$PROJECT_DIR$/tests/test5/servers/fs/proto.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/fs/read.c" afterPath="$PROJECT_DIR$/tests/test5/servers/fs/read.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/fs/select.c" afterPath="$PROJECT_DIR$/tests/test5/servers/fs/select.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/fs/select.h" afterPath="$PROJECT_DIR$/tests/test5/servers/fs/select.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/fs/stadir.c" afterPath="$PROJECT_DIR$/tests/test5/servers/fs/stadir.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/fs/super.c" afterPath="$PROJECT_DIR$/tests/test5/servers/fs/super.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/fs/super.h" afterPath="$PROJECT_DIR$/tests/test5/servers/fs/super.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/fs/table.c" afterPath="$PROJECT_DIR$/tests/test5/servers/fs/table.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/fs/time.c" afterPath="$PROJECT_DIR$/tests/test5/servers/fs/time.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/fs/timers.c" afterPath="$PROJECT_DIR$/tests/test5/servers/fs/timers.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/fs/type.h" afterPath="$PROJECT_DIR$/tests/test5/servers/fs/type.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/fs/utility.c" afterPath="$PROJECT_DIR$/tests/test5/servers/fs/utility.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/fs/write.c" afterPath="$PROJECT_DIR$/tests/test5/servers/fs/write.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/init/Makefile" afterPath="$PROJECT_DIR$/tests/test5/servers/init/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/init/init.c" afterPath="$PROJECT_DIR$/tests/test5/servers/init/init.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/pm/Makefile" afterPath="$PROJECT_DIR$/tests/test5/servers/pm/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/pm/alloc.c" afterPath="$PROJECT_DIR$/tests/test5/servers/pm/alloc.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/pm/break.c" afterPath="$PROJECT_DIR$/tests/test5/servers/pm/break.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/pm/const.h" afterPath="$PROJECT_DIR$/tests/test5/servers/pm/const.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/pm/exec.c" afterPath="$PROJECT_DIR$/tests/test5/servers/pm/exec.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/pm/forkexit.c" afterPath="$PROJECT_DIR$/tests/test5/servers/pm/forkexit.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/pm/getset.c" afterPath="$PROJECT_DIR$/tests/test5/servers/pm/getset.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/pm/glo.h" afterPath="$PROJECT_DIR$/tests/test5/servers/pm/glo.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/pm/main.c" afterPath="$PROJECT_DIR$/tests/test5/servers/pm/main.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/pm/misc.c" afterPath="$PROJECT_DIR$/tests/test5/servers/pm/misc.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/pm/mproc.h" afterPath="$PROJECT_DIR$/tests/test5/servers/pm/mproc.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/pm/param.h" afterPath="$PROJECT_DIR$/tests/test5/servers/pm/param.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/pm/pm.h" afterPath="$PROJECT_DIR$/tests/test5/servers/pm/pm.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/pm/proto.h" afterPath="$PROJECT_DIR$/tests/test5/servers/pm/proto.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/pm/signal.c" afterPath="$PROJECT_DIR$/tests/test5/servers/pm/signal.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/pm/table.c" afterPath="$PROJECT_DIR$/tests/test5/servers/pm/table.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/pm/time.c" afterPath="$PROJECT_DIR$/tests/test5/servers/pm/time.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/pm/timers.c" afterPath="$PROJECT_DIR$/tests/test5/servers/pm/timers.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/pm/trace.c" afterPath="$PROJECT_DIR$/tests/test5/servers/pm/trace.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/pm/type.h" afterPath="$PROJECT_DIR$/tests/test5/servers/pm/type.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/pm/utility.c" afterPath="$PROJECT_DIR$/tests/test5/servers/pm/utility.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/rs/Makefile" afterPath="$PROJECT_DIR$/tests/test5/servers/rs/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/rs/manager.c" afterPath="$PROJECT_DIR$/tests/test5/servers/rs/manager.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/rs/proto.h" afterPath="$PROJECT_DIR$/tests/test5/servers/rs/proto.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/rs/rs.c" afterPath="$PROJECT_DIR$/tests/test5/servers/rs/rs.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/rs/rs.h" afterPath="$PROJECT_DIR$/tests/test5/servers/rs/rs.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/servers/rs/service.c" afterPath="$PROJECT_DIR$/tests/test5/servers/rs/service.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test5/src/testerOX.c" afterPath="$PROJECT_DIR$/tests/test5/src/testerOX.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/Makefile" afterPath="$PROJECT_DIR$/tests/testShell/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/README.txt" afterPath="$PROJECT_DIR$/tests/testShell/README.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/common" afterPath="$PROJECT_DIR$/tests/testShell/common" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/res.out" afterPath="$PROJECT_DIR$/tests/testShell/res.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/setup" afterPath="$PROJECT_DIR$/tests/testShell/setup" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/src/catcher.c" afterPath="$PROJECT_DIR$/tests/testShell/src/catcher.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/src/decho.c" afterPath="$PROJECT_DIR$/tests/testShell/src/decho.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/src/fdcounter.c" afterPath="$PROJECT_DIR$/tests/testShell/src/fdcounter.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/src/splitter.c" afterPath="$PROJECT_DIR$/tests/testShell/src/splitter.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/src/testerOX.c" afterPath="$PROJECT_DIR$/tests/testShell/src/testerOX.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/exec/11.exec" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/exec/11.exec" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/exec/12.exec" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/exec/12.exec" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/exec/13.exec" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/exec/13.exec" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/exec/14.exec" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/exec/14.exec" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/exec/15.exec" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/exec/15.exec" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/exec/16.exec" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/exec/16.exec" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/exec/splitter.exec" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/exec/splitter.exec" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/expected/1.out" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/expected/1.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/expected/11.out" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/expected/11.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/expected/12.out" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/expected/12.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/expected/13.out" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/expected/13.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/expected/14.err" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/expected/14.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/expected/14.out" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/expected/14.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/expected/15.out" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/expected/15.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/expected/16.err" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/expected/16.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/expected/16.out" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/expected/16.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/expected/2.out" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/expected/2.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/expected/3.out" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/expected/3.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/expected/4.err" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/expected/4.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/expected/4.out" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/expected/4.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/expected/5.out" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/expected/5.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/expected/6.err" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/expected/6.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/expected/6.out" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/expected/6.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/input/1.in" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/input/1.in" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/input/11.in" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/input/11.in" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/input/12.in" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/input/12.in" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/input/13.in" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/input/13.in" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/input/14.in" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/input/14.in" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/input/15.in" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/input/15.in" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/input/16.in" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/input/16.in" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/input/2.in" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/input/2.in" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/input/3.in" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/input/3.in" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/input/4.in" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/input/4.in" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/input/5.in" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/input/5.in" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/input/6.in" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/input/6.in" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/output/1.out" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/output/1.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/output/11.out" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/output/11.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/output/12.err" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/output/12.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/output/12.out" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/output/12.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/output/13.out" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/output/13.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/output/14.out" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/output/14.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/output/15.out" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/output/15.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/output/16.err" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/output/16.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/output/16.out" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/output/16.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/output/2.out" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/output/2.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/output/3.out" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/output/3.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/output/4.out" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/output/4.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/output/5.out" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/output/5.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/output/6.err" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/output/6.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/output/6.out" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/output/6.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/1/splitter.exec" afterPath="$PROJECT_DIR$/tests/testShell/suites/1/splitter.exec" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/2/exec/4.exec" afterPath="$PROJECT_DIR$/tests/testShell/suites/2/exec/4.exec" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/2/exec/5.exec" afterPath="$PROJECT_DIR$/tests/testShell/suites/2/exec/5.exec" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/2/exec/6.exec" afterPath="$PROJECT_DIR$/tests/testShell/suites/2/exec/6.exec" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/2/expected/2.out" afterPath="$PROJECT_DIR$/tests/testShell/suites/2/expected/2.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/2/expected/3.gen" afterPath="$PROJECT_DIR$/tests/testShell/suites/2/expected/3.gen" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/2/expected/3.out" afterPath="$PROJECT_DIR$/tests/testShell/suites/2/expected/3.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/2/expected/4.out" afterPath="$PROJECT_DIR$/tests/testShell/suites/2/expected/4.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/2/expected/5.out" afterPath="$PROJECT_DIR$/tests/testShell/suites/2/expected/5.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/2/expected/6.out" afterPath="$PROJECT_DIR$/tests/testShell/suites/2/expected/6.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/2/expected/7.err" afterPath="$PROJECT_DIR$/tests/testShell/suites/2/expected/7.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/2/input/1.in" afterPath="$PROJECT_DIR$/tests/testShell/suites/2/input/1.in" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/2/input/2.in" afterPath="$PROJECT_DIR$/tests/testShell/suites/2/input/2.in" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/2/input/3.in" afterPath="$PROJECT_DIR$/tests/testShell/suites/2/input/3.in" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/2/input/4.in" afterPath="$PROJECT_DIR$/tests/testShell/suites/2/input/4.in" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/2/input/5.in" afterPath="$PROJECT_DIR$/tests/testShell/suites/2/input/5.in" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/2/input/6.in" afterPath="$PROJECT_DIR$/tests/testShell/suites/2/input/6.in" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/2/input/7.in" afterPath="$PROJECT_DIR$/tests/testShell/suites/2/input/7.in" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/2/output/2.out" afterPath="$PROJECT_DIR$/tests/testShell/suites/2/output/2.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/2/output/3.out" afterPath="$PROJECT_DIR$/tests/testShell/suites/2/output/3.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/2/output/4.out" afterPath="$PROJECT_DIR$/tests/testShell/suites/2/output/4.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/2/output/5.out" afterPath="$PROJECT_DIR$/tests/testShell/suites/2/output/5.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/2/output/6.out" afterPath="$PROJECT_DIR$/tests/testShell/suites/2/output/6.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/2/output/7.err" afterPath="$PROJECT_DIR$/tests/testShell/suites/2/output/7.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/3/expected/1.out" afterPath="$PROJECT_DIR$/tests/testShell/suites/3/expected/1.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/3/expected/2.out" afterPath="$PROJECT_DIR$/tests/testShell/suites/3/expected/2.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/3/expected/3.out" afterPath="$PROJECT_DIR$/tests/testShell/suites/3/expected/3.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/3/expected/4.err" afterPath="$PROJECT_DIR$/tests/testShell/suites/3/expected/4.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/3/expected/4.out" afterPath="$PROJECT_DIR$/tests/testShell/suites/3/expected/4.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/3/expected/5.out" afterPath="$PROJECT_DIR$/tests/testShell/suites/3/expected/5.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/3/expected/6.out" afterPath="$PROJECT_DIR$/tests/testShell/suites/3/expected/6.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/3/expected/7.out" afterPath="$PROJECT_DIR$/tests/testShell/suites/3/expected/7.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/3/input/1.in" afterPath="$PROJECT_DIR$/tests/testShell/suites/3/input/1.in" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/3/input/2.in" afterPath="$PROJECT_DIR$/tests/testShell/suites/3/input/2.in" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/3/input/3.in" afterPath="$PROJECT_DIR$/tests/testShell/suites/3/input/3.in" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/3/input/4.in" afterPath="$PROJECT_DIR$/tests/testShell/suites/3/input/4.in" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/3/input/5.in" afterPath="$PROJECT_DIR$/tests/testShell/suites/3/input/5.in" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/3/input/6.in" afterPath="$PROJECT_DIR$/tests/testShell/suites/3/input/6.in" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/3/input/7.in" afterPath="$PROJECT_DIR$/tests/testShell/suites/3/input/7.in" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/3/output/1.err" afterPath="$PROJECT_DIR$/tests/testShell/suites/3/output/1.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/3/output/1.out" afterPath="$PROJECT_DIR$/tests/testShell/suites/3/output/1.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/3/output/2.out" afterPath="$PROJECT_DIR$/tests/testShell/suites/3/output/2.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/3/output/3.out" afterPath="$PROJECT_DIR$/tests/testShell/suites/3/output/3.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/3/output/4.err" afterPath="$PROJECT_DIR$/tests/testShell/suites/3/output/4.err" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/3/output/4.out" afterPath="$PROJECT_DIR$/tests/testShell/suites/3/output/4.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/3/output/5.out" afterPath="$PROJECT_DIR$/tests/testShell/suites/3/output/5.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/3/output/6.out" afterPath="$PROJECT_DIR$/tests/testShell/suites/3/output/6.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/3/output/7.out" afterPath="$PROJECT_DIR$/tests/testShell/suites/3/output/7.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/3/post/1.post" afterPath="$PROJECT_DIR$/tests/testShell/suites/3/post/1.post" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/3/post/2.post" afterPath="$PROJECT_DIR$/tests/testShell/suites/3/post/2.post" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/3/post/3.post" afterPath="$PROJECT_DIR$/tests/testShell/suites/3/post/3.post" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/3/post/4.post" afterPath="$PROJECT_DIR$/tests/testShell/suites/3/post/4.post" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/3/post/5.post" afterPath="$PROJECT_DIR$/tests/testShell/suites/3/post/5.post" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/3/post/6.post" afterPath="$PROJECT_DIR$/tests/testShell/suites/3/post/6.post" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/3/post/7.post" afterPath="$PROJECT_DIR$/tests/testShell/suites/3/post/7.post" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/4/exec/3.exec" afterPath="$PROJECT_DIR$/tests/testShell/suites/4/exec/3.exec" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/4/expected/1.out" afterPath="$PROJECT_DIR$/tests/testShell/suites/4/expected/1.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/4/expected/2.out" afterPath="$PROJECT_DIR$/tests/testShell/suites/4/expected/2.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/4/expected/3.out" afterPath="$PROJECT_DIR$/tests/testShell/suites/4/expected/3.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/4/expected/4.out" afterPath="$PROJECT_DIR$/tests/testShell/suites/4/expected/4.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/4/input/1.in" afterPath="$PROJECT_DIR$/tests/testShell/suites/4/input/1.in" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/4/input/2.in" afterPath="$PROJECT_DIR$/tests/testShell/suites/4/input/2.in" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/4/input/3.in" afterPath="$PROJECT_DIR$/tests/testShell/suites/4/input/3.in" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/4/input/4.in" afterPath="$PROJECT_DIR$/tests/testShell/suites/4/input/4.in" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/4/output/1.out" afterPath="$PROJECT_DIR$/tests/testShell/suites/4/output/1.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/4/pre/1.pre" afterPath="$PROJECT_DIR$/tests/testShell/suites/4/pre/1.pre" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/4/pre/2.pre" afterPath="$PROJECT_DIR$/tests/testShell/suites/4/pre/2.pre" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/4/pre/3.pre" afterPath="$PROJECT_DIR$/tests/testShell/suites/4/pre/3.pre" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testShell/suites/4/pre/4.pre" afterPath="$PROJECT_DIR$/tests/testShell/suites/4/pre/4.pre" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils.c" afterPath="$PROJECT_DIR$/utils.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mshell.o" afterPath="$PROJECT_DIR$/mshell.o" />
     </list>
     <ignored path="shell.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -792,8 +37,8 @@
       <file leaf-file-name="mshell.c" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mshell.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="273" column="28" selection-start-line="273" selection-start-column="28" selection-end-line="273" selection-end-column="28" />
+            <state relative-caret-position="343">
+              <caret line="299" column="20" selection-start-line="299" selection-start-column="20" selection-end-line="299" selection-end-column="20" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -931,7 +176,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="planProjektu" />
+              <option name="myItemId" value="include" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1178,15 +423,15 @@
       <workItem from="1480020017017" duration="441000" />
       <workItem from="1480375288881" duration="4126000" />
       <workItem from="1480444806256" duration="1360000" />
-      <workItem from="1480451790566" duration="9853000" />
+      <workItem from="1480451790566" duration="11288000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98723000" />
+    <option name="totallyTimeSpent" value="100158000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="57" y="24" width="1309" height="744" extended-state="6" />
+    <frame x="57" y="24" width="1309" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23172629" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1515,27 +760,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/config.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/siparse.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/utils.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/planProjektu/etap3.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="738">
@@ -1571,20 +795,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/oldVersion/poTrzechEtapach.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3132">
-          <caret line="40" column="5" selection-start-line="35" selection-start-column="4" selection-end-line="40" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/oldVersion/old.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-216">
-          <caret line="78" column="23" selection-start-line="78" selection-start-column="23" selection-end-line="78" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/planProjektu/etap5.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -1616,6 +826,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/oldVersion/poTrzechEtapach.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2898">
+          <caret line="40" column="5" selection-start-line="35" selection-start-column="4" selection-end-line="40" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/oldVersion/mshell.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -1624,10 +842,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/oldVersion/old.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="89" column="20" selection-start-line="89" selection-start-column="20" selection-end-line="89" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/utils.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/siparse.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/config.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/mshell.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="273" column="28" selection-start-line="273" selection-start-column="28" selection-end-line="273" selection-end-column="28" />
+        <state relative-caret-position="343">
+          <caret line="299" column="20" selection-start-line="299" selection-start-column="20" selection-end-line="299" selection-end-column="20" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
