@@ -113,8 +113,8 @@ void przekierowaniaWejscia(int l, command *com) {
 
 void execute() {
     line *ln = NULL;
-    int pipeNumber = 0;
-    int lineSize = 0;
+    int aktualnyPipe = 0;
+    int liczbaPipow = 0;
 
     buforParsera[rozmiarParser] = 0;
 
@@ -131,39 +131,37 @@ void execute() {
         return;
     }
 
-    // printparsedline(ln);
-
-    while ((ln->pipelines[lineSize]) != NULL) {
-        lineSize++;
+    while ((ln->pipelines[liczbaPipow]) != NULL) {
+        liczbaPipow++;
     }
 
-    FOR(pipeNumber, 0, lineSize - 1) {
-        int pipeSize = 0;
-        while (ln->pipelines[pipeNumber][pipeSize] != NULL) {
-            pipeSize++;
+    FOR(aktualnyPipe, 0, liczbaPipow - 1) {
+        int liczbaKomend = 0;
+        while (ln->pipelines[aktualnyPipe][liczbaKomend] != NULL) {
+            liczbaKomend++;
         }
 
         int pozycja = 0;
-        FOR(pozycja, 0, pipeSize - 1) {
-            if (ln->pipelines[pipeNumber][pozycja]->argv[0] == NULL && pipeSize > 1) {
+        FOR(pozycja, 0, liczbaKomend - 1) {
+            if (ln->pipelines[aktualnyPipe][pozycja]->argv[0] == NULL && liczbaKomend > 1) {
                 SYNTAX();
                 return;
             }
         }
     }
 
-    FOR(pipeNumber, 0, lineSize - 1) {
-        int comNumber = 0;
-        int pipeSize = 0;
-        while (ln->pipelines[pipeNumber][pipeSize] != NULL) {
-            pipeSize++;
+    FOR(aktualnyPipe, 0, liczbaPipow - 1) {
+        int aktualnaKomenda = 0;
+        int liczbaKomend = 0;
+        while (ln->pipelines[aktualnyPipe][liczbaKomend] != NULL) {
+            liczbaKomend++;
         }
 
-        int pipes[pipeSize][2];
+        int pipes[liczbaKomend][2];
 
-        FOR(comNumber, 0, pipeSize - 1) {
-            command *com = ln->pipelines[pipeNumber][comNumber];
-            if (pipeSize == 1) {
+        FOR(aktualnaKomenda, 0, liczbaKomend - 1) {
+            command *com = ln->pipelines[aktualnyPipe][aktualnaKomenda];
+            if (liczbaKomend == 1) {
                 if (komendaWbudowana(com) == 1) {
                     continue;
                 }
@@ -171,8 +169,8 @@ void execute() {
 
             pid_t pid;
 
-            if (pipeSize - 1 != 0) {
-                pipe(pipes[comNumber]);
+            if (liczbaKomend - 1 != 0) {
+                pipe(pipes[aktualnaKomenda]);
             }
 
             if ((pid = fork()) == -1) {
@@ -184,34 +182,34 @@ void execute() {
                     liczbaPrzekierowan++;
                 }
 
-                if (pipeSize - 1 != 0) {
-                    if (comNumber == 0) {
-                        close(pipes[comNumber][READ_END]);
+                if (liczbaKomend - 1 != 0) {
+                    if (aktualnaKomenda == 0) {
+                        close(pipes[aktualnaKomenda][READ_END]);
 
                         close(STDOUT_FILENO);
-                        dup2(pipes[comNumber][WRITE_END], STDOUT_FILENO);
-                        close(pipes[comNumber][WRITE_END]);
+                        dup2(pipes[aktualnaKomenda][WRITE_END], STDOUT_FILENO);
+                        close(pipes[aktualnaKomenda][WRITE_END]);
                     }
-                    if (comNumber > 0 && comNumber < pipeSize - 1) {
-                        close(pipes[comNumber - 1][WRITE_END]);
+                    if (aktualnaKomenda > 0 && aktualnaKomenda < liczbaKomend - 1) {
+                        close(pipes[aktualnaKomenda - 1][WRITE_END]);
 
                         close(STDIN_FILENO);
-                        dup2(pipes[comNumber - 1][READ_END], STDIN_FILENO);
-                        close(pipes[comNumber - 1][READ_END]);
+                        dup2(pipes[aktualnaKomenda - 1][READ_END], STDIN_FILENO);
+                        close(pipes[aktualnaKomenda - 1][READ_END]);
 
                         close(STDOUT_FILENO);
-                        dup2(pipes[comNumber][WRITE_END], STDOUT_FILENO);
-                        close(pipes[comNumber][WRITE_END]);
+                        dup2(pipes[aktualnaKomenda][WRITE_END], STDOUT_FILENO);
+                        close(pipes[aktualnaKomenda][WRITE_END]);
 
-                        close(pipes[comNumber][READ_END]);
+                        close(pipes[aktualnaKomenda][READ_END]);
                     }
-                    if (comNumber == pipeSize - 1) {
-                        close(pipes[comNumber - 1][WRITE_END]);
-                        close(pipes[comNumber][WRITE_END]);
+                    if (aktualnaKomenda == liczbaKomend - 1) {
+                        close(pipes[aktualnaKomenda - 1][WRITE_END]);
+                        close(pipes[aktualnaKomenda][WRITE_END]);
 
                         close(STDIN_FILENO);
-                        dup2(pipes[comNumber - 1][READ_END], STDIN_FILENO);
-                        close(pipes[comNumber - 1][READ_END]);
+                        dup2(pipes[aktualnaKomenda - 1][READ_END], STDIN_FILENO);
+                        close(pipes[aktualnaKomenda - 1][READ_END]);
                     }
                 }
 
@@ -223,17 +221,17 @@ void execute() {
                 }
             } else {
                 while (wait(NULL) != -1);
-                close(pipes[comNumber][WRITE_END]);
-                if (comNumber >= 2) {
-                    close(pipes[comNumber - 2][READ_END]);
-                    close(pipes[comNumber - 2][WRITE_END]);
+                close(pipes[aktualnaKomenda][WRITE_END]);
+                if (aktualnaKomenda >= 2) {
+                    close(pipes[aktualnaKomenda - 2][READ_END]);
+                    close(pipes[aktualnaKomenda - 2][WRITE_END]);
                 }
             }
         }
 
-        FOR(comNumber, 0, pipeSize - 1) {
-            close(pipes[comNumber][READ_END]);
-            close(pipes[comNumber][WRITE_END]);
+        FOR(aktualnaKomenda, 0, liczbaKomend - 1) {
+            close(pipes[aktualnaKomenda][READ_END]);
+            close(pipes[aktualnaKomenda][WRITE_END]);
         }
     }
 }
@@ -257,6 +255,7 @@ void readline() {
             if (rozmiarGlowny == 0) {
                 exit(0);
             }
+
             if (rozmiarGlowny == -1) {
                 exit(1);
             }
@@ -305,6 +304,7 @@ void readline() {
                 memset(buforGlowny, 0, 2 * rozmiarGlowny + 10);
                 rozmiarGlowny = 0;
                 pozycjaGlowny = 0;
+                rozmiarGlowny = read(0, buforGlowny, 2 * 1000000);
                 koniecParser = 0;
             }
         }
