@@ -174,7 +174,7 @@ ls(char *argv[]) {
             return BUILTIN_ERROR;
         }
         if (dp->d_name[0] != '.') {
-            puts(dp->d_name);
+            fprintf(stdout, "%s\n", dp->d_name);
         }
     }
 
