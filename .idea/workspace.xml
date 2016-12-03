@@ -12,12 +12,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2ab1709-3d87-4027-bf11-6ed04aa3dbb8" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/builtins.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/inputParse/Makefile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/inputParse/lex.yy.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/inputParse/lex.yy.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/inputParse/siparse.lex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/inputParse/siparse.y" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/inputParse/siparseutils.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/inputParse/siparseutils.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/inputParse/siparseutils.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/inputParse/y.tab.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/inputParse/y.tab.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/inputParse/y.tab.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mshell.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/utils.o" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mshell" afterPath="$PROJECT_DIR$/mshell" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/builtins.c" afterPath="$PROJECT_DIR$/builtins.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/builtins.o" afterPath="$PROJECT_DIR$/builtins.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mshell.c" afterPath="$PROJECT_DIR$/mshell.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mshell.o" afterPath="$PROJECT_DIR$/mshell.o" />
     </list>
     <ignored path="shell.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,11 +47,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="mshell.c" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mshell.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mshell.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+            <state relative-caret-position="72">
+              <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Makefile" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/input_parse/Makefile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -82,7 +102,7 @@
       <file leaf-file-name="etap5.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/planProjektu/etap5.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
+            <state relative-caret-position="-198">
               <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
               <folding />
             </state>
@@ -106,10 +126,11 @@
         <option value="$PROJECT_DIR$/utils.c" />
         <option value="$PROJECT_DIR$/poTrzechEtapach.c" />
         <option value="$PROJECT_DIR$/oldVersion/4wersja.cpp" />
-        <option value="$PROJECT_DIR$/inputParse/Makefile" />
         <option value="$PROJECT_DIR$/builtins.c" />
         <option value="$PROJECT_DIR$/planProjektu/etap5.txt" />
         <option value="$PROJECT_DIR$/mshell.c" />
+        <option value="$PROJECT_DIR$/inputParse/Makefile" />
+        <option value="$PROJECT_DIR$/input_parse/Makefile" />
       </list>
     </option>
   </component>
@@ -173,7 +194,38 @@
     </navigator>
     <panes>
       <pane id="ProjectPane">
-        <subPane />
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="minixShell" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="minixShell" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="minixShell" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="minixShell" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="minixShell" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="input_parse" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
       </pane>
     </panes>
   </component>
@@ -417,18 +469,18 @@
       <workItem from="1480375288881" duration="4126000" />
       <workItem from="1480444806256" duration="1360000" />
       <workItem from="1480451790566" duration="15443000" />
-      <workItem from="1480706249522" duration="16474000" />
+      <workItem from="1480706249522" duration="17152000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120787000" />
+    <option name="totallyTimeSpent" value="121465000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="-4" width="1309" height="772" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46909666" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4688958" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3126935" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -488,21 +540,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mshell.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/planProjektu/etap4.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="361" selection-start-line="18" selection-start-column="361" selection-end-line="18" selection-end-column="361" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/include/builtins.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -736,13 +773,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/inputParse/Makefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/oldVersion/4wersja.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3348">
@@ -761,6 +791,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2898">
           <caret line="40" column="5" selection-start-line="35" selection-start-column="4" selection-end-line="40" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -768,6 +799,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="264" column="54" selection-start-line="264" selection-start-column="8" selection-end-line="264" selection-end-column="54" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -775,6 +807,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="89" column="20" selection-start-line="89" selection-start-column="20" selection-end-line="89" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -843,16 +876,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/planProjektu/etap5.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
+        <state relative-caret-position="-198">
           <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inputParse/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input_parse/siparse.y">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mshell.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+        <state relative-caret-position="72">
+          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input_parse/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
           <folding />
         </state>
       </provider>

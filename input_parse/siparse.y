@@ -2,12 +2,12 @@
 	#include <siparse.h>
 	#include "siparseutils.h"
     #include <stdio.h>
-
+    
 	extern int yyleng;
 
 	int yylex(void);
 	void yyerror(char *);
-
+  
 	void switchinputbuftostring(const char *);
 	void freestringinputbuf(void);
 
@@ -34,14 +34,14 @@
 
 line:
 	pipelineseq mamp mcomment mendl {
-			parsed_line.pipelines = closepipelineseq();
+			parsed_line.pipelines = closepipelineseq(); 
 			parsed_line.flags= $2.flags;
 			$$.parsedln = &parsed_line;
 		}
 	;
 
 mamp:
-	'&' { $$.flags = LINBACKGROUND; }
+	'&' { $$.flags = LINBACKGROUND; } 
 	|	{ $$.flags = 0; }
 	;
 
@@ -82,7 +82,7 @@ pipeline:
 single:
 	allnames allredirs {
 			if ($1.argv==NULL) {
-				$$.comm= NULL;
+				$$.comm= NULL;	
 			} else {
 				command *com= nextcommand();
 				com->argv = $1.argv;
@@ -102,8 +102,8 @@ allredirs:
 names:
 	names name {
 			$$.argv = appendtoargv($2.name);
-		}
-	|
+		} 
+	|	 
 	;
 
 name:	SSTRING {
