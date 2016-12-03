@@ -12,11 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2ab1709-3d87-4027-bf11-6ed04aa3dbb8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mshell" afterPath="$PROJECT_DIR$/mshell" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/shell.iml" afterPath="$PROJECT_DIR$/.idea/shell.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mshell.c" afterPath="$PROJECT_DIR$/mshell.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mshell.o" afterPath="$PROJECT_DIR$/mshell.o" />
     </list>
     <ignored path="shell.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,8 +35,8 @@
       <file leaf-file-name="mshell.c" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mshell.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="52">
-              <caret line="555" column="34" selection-start-line="555" selection-start-column="34" selection-end-line="555" selection-end-column="34" />
+            <state relative-caret-position="412">
+              <caret line="440" column="0" selection-start-line="440" selection-start-column="0" selection-end-line="440" selection-end-column="0" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -388,12 +384,12 @@
       <workItem from="1480444806256" duration="1360000" />
       <workItem from="1480451790566" duration="15443000" />
       <workItem from="1480706249522" duration="18858000" />
-      <workItem from="1480764769693" duration="9439000" />
+      <workItem from="1480764769693" duration="9571000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="132610000" />
+    <option name="totallyTimeSpent" value="132742000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="52" width="654" height="716" extended-state="4" />
@@ -804,8 +800,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mshell.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="555" column="34" selection-start-line="555" selection-start-column="34" selection-end-line="555" selection-end-column="34" />
+        <state relative-caret-position="412">
+          <caret line="440" column="0" selection-start-line="440" selection-start-column="0" selection-end-line="440" selection-end-column="0" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>

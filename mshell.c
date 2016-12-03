@@ -427,12 +427,7 @@ void readline() {
             // ewentualna obsluga bledow
 
             if (rozmiarGlowny == 0) {
-                if (errno == EINTR) {
-                    bezPrompta = 1;
-                    return;
-                } else {
-                    exit(0);
-                }
+                exit(0);
             }
 
             if (rozmiarGlowny == -1) {
