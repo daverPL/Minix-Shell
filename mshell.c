@@ -17,7 +17,7 @@
 #define SYNTAX() fprintf(stderr, "%s\n", SYNTAX_ERROR_STR) // wypisywanie syntax error
 #define READ_END 0 // koncowka pipa odpowiadajaca za czytanie z niego
 #define WRITE_END 1 // koncowka pipa odpowiadajaca za pisanie do niego
-#define MAX_ENDED_PROCESSES 1000 // makysmalna liczba procesow z tla ktore moja struktura przetrzymuje
+#define MAX_ENDED_PROCESSES 500 // makysmalna liczba procesow z tla ktore moja struktura przetrzymuje
 #define MAX_BUFOR 4000010 // maksymalny rozmiar bufora glownego do ktorego zczytuje standardowe wejscie
 
 char buforGlowny[MAX_BUFOR]; // aktualni odczytane wejscie
@@ -406,6 +406,7 @@ void execute() {
 void readline() {
     // flaga trzymajaca info czy linia jest za dluga czy nie
     liniaZaDluga = 0;
+    int flaga = 0;
 
     while (1) {
         // jezeli w parserze jest linia zakonczona znakiem konca linii too wtedy ja wykonaj
@@ -419,9 +420,10 @@ void readline() {
         } else {
             // jezeli nie ma w parserze znaku konca linii
             if (rozmiarGlowny == 0) {
+                A:
                 // jezeli w buforze glownym nie mamy nic to czytamy ile mozna
                 pozycjaGlowny = 0;
-                rozmiarGlowny = read(0, buforGlowny, 2 * 1000000);
+                rozmiarGlowny = read(0, buforGlowny, MAX_BUFOR / 2);
             }
 
             // ewentualna obsluga bledow
@@ -477,6 +479,7 @@ void readline() {
                     pozycjaGlowny = 0;
                 }
                 koniecParser = 1;
+                flaga = 0;
             } else {
                 // a jak w buforze glownym nie dostalismy konca linii to znaczy ze caly bufor glowny mozna wrzucic do parsera
                 // nic sie nie stanie a my oczekujemy na kolejny odczyt reada ktory byc moze poda nam nowy koniec linii
@@ -488,8 +491,9 @@ void readline() {
                 memset(buforGlowny, 0, 2 * rozmiarGlowny + 10);
                 rozmiarGlowny = 0;
                 pozycjaGlowny = 0;
-                rozmiarGlowny = read(0, buforGlowny, 2 * 1000000);
+                rozmiarGlowny = read(0, buforGlowny, MAX_BUFOR / 2);
                 koniecParser = 0;
+                flaga = 1;
             }
         }
 
@@ -498,6 +502,7 @@ void readline() {
         if (rozmiarParser >= MAX_LINE_LENGTH) {
             liniaZaDluga = 1;
             memset(buforParsera, 0, 2 * rozmiarParser + 10);
+            if(flaga == 1) goto A;
             rozmiarParser = 0;
             koniecParser = 0;
             SYNTAX();
@@ -518,7 +523,7 @@ int main(int argc, char *argv[]) {
     // dla sygnalu sigCHLD definiujemy sposob obslugi w naszej funkcji napisanej wyzej
     sigCHLD.sa_handler = chldHandler;
     // nadzoruje obsluge sygnalu przez jadro
-    sigCHLD.sa_flags = 0;
+    sigCHLD.sa_flags = SA_RESTART;
     // podobnie zaznaczamy ze podczas obslugi ma nie blokowac sygnalow
     sigemptyset(&sigCHLD.sa_mask);
     // dodajemy dla sygnalu SIGCHLD nasz sposob jego obslugi zdefiniowany w handlerze
