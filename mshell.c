@@ -435,7 +435,9 @@ void readline() {
             if (rozmiarGlowny == -1) {
                 if (errno == EINTR) {
                     bezPrompta = 1;
-                    return;
+                    rozmiarGlowny = 0;
+                    wypisujZakonczone = 1;
+                    continue;
                 } else {
                     exit(1);
                 }
@@ -502,7 +504,7 @@ void readline() {
         if (rozmiarParser >= MAX_LINE_LENGTH) {
             liniaZaDluga = 1;
             memset(buforParsera, 0, 2 * rozmiarParser + 10);
-            if(flaga == 1) goto A;
+            if (flaga == 1) goto A;
             rozmiarParser = 0;
             koniecParser = 0;
             SYNTAX();
@@ -565,6 +567,7 @@ int main(int argc, char *argv[]) {
                 // zerujemy liczbe procesow w tle ktore sie zakonczyly
                 liczbaZakonczonychTlo = 0;
                 ileProcesowLiniaNormalna = 0;
+                bezPrompta = 0;
             }
 
             // wypisz prompta jak go powinien wypisac
@@ -572,7 +575,6 @@ int main(int argc, char *argv[]) {
                 write(1, PROMPT_STR, 2);
             }
         }
-        bezPrompta = 0;
         readline();
     }
 }
