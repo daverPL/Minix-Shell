@@ -1,3 +1,0 @@
-
-$shell < $inf 2> $errf | sort > $outf
-

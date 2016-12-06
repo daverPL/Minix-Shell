@@ -1,2 +1,0 @@
-echo $HOME > $EXPECTED_DIR/3.out
-cat /dev/null > $EXPECTED_DIR/3.err

@@ -12,9 +12,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2ab1709-3d87-4027-bf11-6ed04aa3dbb8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mshell" afterPath="$PROJECT_DIR$/mshell" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mshell.c" afterPath="$PROJECT_DIR$/mshell.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mshell.o" afterPath="$PROJECT_DIR$/mshell.o" />
     </list>
     <ignored path="shell.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,8 +36,8 @@
       <file leaf-file-name="mshell.c" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mshell.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="66" column="27" selection-start-line="66" selection-start-column="27" selection-end-line="66" selection-end-column="27" />
+            <state relative-caret-position="44">
+              <caret line="554" column="24" selection-start-line="554" selection-start-column="24" selection-end-line="554" selection-end-column="24" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -49,8 +48,8 @@
       <file leaf-file-name="etap5.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/planProjektu/etap5.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="29" column="21" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
+            <state relative-caret-position="666">
+              <caret line="37" column="14" selection-start-line="37" selection-start-column="14" selection-end-line="37" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -73,10 +72,10 @@
         <option value="$PROJECT_DIR$/utils.c" />
         <option value="$PROJECT_DIR$/poTrzechEtapach.c" />
         <option value="$PROJECT_DIR$/oldVersion/4wersja.cpp" />
-        <option value="$PROJECT_DIR$/planProjektu/etap5.txt" />
         <option value="$PROJECT_DIR$/inputParse/Makefile" />
         <option value="$PROJECT_DIR$/input_parse/Makefile" />
         <option value="$PROJECT_DIR$/builtins.c" />
+        <option value="$PROJECT_DIR$/planProjektu/etap5.txt" />
         <option value="$PROJECT_DIR$/mshell.c" />
       </list>
     </option>
@@ -89,9 +88,9 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="57" />
-    <option name="y" value="52" />
+    <option name="y" value="24" />
     <option name="width" value="654" />
-    <option name="height" value="716" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -126,7 +125,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -139,11 +138,7 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane />
-      </pane>
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -390,20 +385,22 @@
       <workItem from="1480788853022" duration="7123000" />
       <workItem from="1480805606165" duration="821000" />
       <workItem from="1480807748816" duration="4221000" />
-      <workItem from="1480893487727" duration="2951000" />
+      <workItem from="1480893487727" duration="3771000" />
+      <workItem from="1480929363636" duration="199000" />
+      <workItem from="1480965351258" duration="226000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="154495000" />
+    <option name="totallyTimeSpent" value="155740000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="57" y="52" width="654" height="716" extended-state="4" />
+    <frame x="57" y="24" width="654" height="744" extended-state="4" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4681182" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32686085" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34142396" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32817337" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -794,21 +791,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/planProjektu/etap5.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="29" column="21" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mshell.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="66" column="27" selection-start-line="66" selection-start-column="27" selection-end-line="66" selection-end-column="27" />
+        <state relative-caret-position="44">
+          <caret line="554" column="24" selection-start-line="554" selection-start-column="24" selection-end-line="554" selection-end-column="24" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/planProjektu/etap5.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="666">
+          <caret line="37" column="14" selection-start-line="37" selection-start-column="14" selection-end-line="37" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>

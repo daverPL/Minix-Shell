@@ -1,3 +1,0 @@
-
-$TESTED_SHELL < $inf 2> $errf | sort > $outf
-

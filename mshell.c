@@ -504,7 +504,7 @@ void readline() {
         if (rozmiarParser >= MAX_LINE_LENGTH) {
             liniaZaDluga = 1;
             memset(buforParsera, 0, 2 * rozmiarParser + 10);
-            if (flaga == 1) goto A;
+            if(flaga == 1) goto A;
             rozmiarParser = 0;
             koniecParser = 0;
             SYNTAX();
